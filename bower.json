@@ -1,0 +1,21 @@
+{
+  "name": "Viglet",
+  "version": "1.0",
+  "description": "Viglet",
+  "authors": [
+    "Alexandre Oliveira"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.viglet.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "thirdparty",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*"
+  }
+}
