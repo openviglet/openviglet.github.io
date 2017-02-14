@@ -123,7 +123,7 @@
         </div>
         <div id="footer">
             <div class="container">
-                <p style="text-align: center;padding-top:10px">© 2016 Viglet</p>             
+                <p style="text-align: center;padding-top:10px" id="footerMessage"></p>             
             </div>
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -132,8 +132,13 @@
         <script src="thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
             $('body').scrollspy({target: '.navbar-default'})
+            
         </script>        
         <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script>
+         var currentFullYear = new Date().getFullYear();
+        $('#footerMessage').html("© " + currentFullYear + " Viglet" );
+        </script>
     </body>
 
 </html>
