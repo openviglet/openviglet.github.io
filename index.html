@@ -86,49 +86,81 @@ Tweet #IAParaTodos</a> </div>
                         <p>Integre soluções de forma simples e intuitiva, ganhando tempo usando melhores práticas. Utilize Fluxo e plugins desenvolvidos pela comunidade para maximizar a reutilização dos seus dados. Suporte a Máquina de Aprendizado, NLP, Search Engine e Banco de Dados.</p>
                     </div>
                 </div>
-                <div id="participe" class="row row-centered" style="margin-top: 150px">
-                    <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 col-centered jumbotron" style="text-align:center;font-size: 20px;line-height: 150%">
+                <div id="participe" class="row row-centered" style="margin-top: 150px" >
+                    <div class="col-lg-6 col-md-9 col-sm-10 col-xs-10 col-centered jumbotron" style="text-align:center;min-height:450px">
                         <h1>Participe do desenvolvimento</h1>
-                        <p>Se você quer colaborar no desenvolvimento do <b>Viglet Turing</b>, clique no botão abaixo para acessar o questionário. Desta maneira, vocês estará ajudando a criar formas de permitir que a Inteligência Artificial seja acessível à todos.</p> <a href="https://goo.gl/forms/Sp9Kp7Rynp8J4Jgg2" target="_blank" class="btn btn-warning btn-lg btn-block" role="button" aria-pressed="true">Sim, quero participar!</a> </div>
+                        <p>Se você quer colaborar no desenvolvimento do <b>Viglet Turing</b>, clique no botão abaixo para acessar o questionário. Desta maneira, vocês estará ajudando a criar formas de permitir que a Inteligência Artificial seja acessível à todos.</p> <a href="https://goo.gl/forms/Sp9Kp7Rynp8J4Jgg2" target="_blank" class="btn btn-warning btn-lg btn-block" role="button" aria-pressed="true">Sim, quero participar!</a>
+                    </div>
+                    <div class="col-lg-3 col-md-9 col-sm-10 col-xs-10 col-centered">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" >Acompanhe o progresso do desenvolvimento do Viglet Turing</div>
+                            <div id="turingfeed" class="panel-body" style="text-align:left;overflow-y: auto;max-height:380px"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="turing_progress" class="row row-centered">
+                    
                 </div>
             </div>
         </div>
-    </div>
-    <div id="footer">
-        <div class="container">
-            <p style="text-align: center;padding-top:10px;" id="footerMessage"></p>
+        <div id="footer">
+            <div class="container">
+                <p style="text-align: center;padding-top:10px;" id="footerMessage"></p>
+            </div>
         </div>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="thirdparty/jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $('body').scrollspy({
-            target: '.navbar-default'
-        })
-    </script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script>
-        var currentFullYear = new Date().getFullYear();
-        $('#footerMessage').html("© " + currentFullYear + " Viglet");
-    </script>
-    <script>
-        window.twttr = (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0]
-                , t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            t._e = [];
-            t.ready = function (f) {
-                t._e.push(f);
-            };
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="thirdparty/jquery/dist/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="thirdparty/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="thirdparty/moment/min/moment-with-locales.min.js"></script>
+        <script>
+            $('body').scrollspy({
+                target: '.navbar-default'
+            })
+        </script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script>
+            var currentFullYear = new Date().getFullYear();
+            $('#footerMessage').html("© " + currentFullYear + " Viglet");
+        </script>
+        <script>
+            window.twttr = (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0]
+                    , t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                t._e = [];
+                t.ready = function (f) {
+                    t._e.push(f);
+                };
+                return t;
+            }(document, "script", "twitter-wjs"));
+        </script>
+        <script>
+            $.get("https://bitbucket.org/sumware/viglet-turing/rss?token=0cce26757ed49fa69e894668377cffc6", function (data) {    
+                var $XML = $(data);    
+                $XML.find("item").each(function () {        
+                    var $this = $(this)
+                        ,             item = {                
+                            title:       $this.find("title").text()
+                            ,                 link:        $this.find("link").text()
+                            ,                 description: $this.find("description").text()
+                            ,                 pubDate:     $this.find("pubDate").text()
+                            ,                 author:      $this.find("author").text()            
+                        };
+                    var formats = ['ddd, DD MMM YYYY HH:mm:ss ZZ', 'ddd, DD MMM YY HH:mm:ss ZZ'];
+                    var date = new Date(item.pubDate);
+                    var strDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();  
+                    var momentDate = moment(item.pubDate, formats).locale('pt').fromNow();
+                    //var now = moment();
+                    $('#turingfeed').append($('<div style="margin-top:20px">').html(item.title)).append($('<small>').html(momentDate));
+                        
+                });
+            });
+        </script>
 </body>
 
 </html>

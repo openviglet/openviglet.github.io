@@ -1,5 +1,5 @@
 {
-  "name": "Viglet",
+  "name": "viglet",
   "version": "1.0",
   "description": "Viglet",
   "authors": [
@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "moment": "*"
   }
 }
