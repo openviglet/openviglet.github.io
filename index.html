@@ -32,6 +32,30 @@
         padding: 15px;
         width: auto;
     }
+    
+    .navbar-default .navbar-nav>li:focus,
+    .navbar-default .navbar-nav>li:hover {
+        color: #333;
+        background-color: transparent;
+        border-bottom-color: orange;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+    
+    navbar-default .navbar-nav>li:focus,
+    .navbar-default .navbar-nav>li {
+        color: #333;
+        background-color: transparent;
+        border-bottom-color: transparent;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+    
+    .navbar-default .navbar-nav>li.active {
+        border-bottom-color: orange;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
 </style>
 
 <body data-spy="scroll" data-target=".navbar-default">
@@ -147,6 +171,22 @@
     <script>
         var currentFullYear = new Date().getFullYear();
         $('#footerMessage').html("© " + currentFullYear + " Viglet");
+    </script>
+    <script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
     </script>
     <script>
         window.twttr = (function (d, s, id) {
