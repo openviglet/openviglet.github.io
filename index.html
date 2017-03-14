@@ -57,8 +57,49 @@
         border-bottom-style: solid;
     }
 </style>
+<style>
+    @media only screen and (min-width: 321px) {
+        .cover-welcome {
+            margin-top: 60px;
+            min-width: 100%;
+            min-height: 180px;
+            width: auto;
+            height: auto;
+            //  height: 100%; 
+            z-index: -100;
+            background-size: cover;
+            background-position: center top;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            overflow: hidden;
+            background: url('img/banner/iaparatodos.jpg') 50% 50% / cover no-repeat;
+        }
+    }
+    
+    @media only screen and (min-width: 1000px) {
+        /* Styles */
+        .cover-welcome {
+            margin-top: 60px;
+            min-width: 100%;
+            min-height: 500px;
+            width: auto;
+            height: auto;
+            //  height: 100%; 
+            z-index: -100;
+            background-size: cover;
+            background-position: center top;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            overflow: hidden;
+            background: url('https://pbs.twimg.com/media/C6pPPSNWkAISxBK.jpg:large') 50% 50% / cover no-repeat;
+        }
+    }
+</style>
 
 <body data-spy="scroll" data-target=".navbar-default">
+
     <div id="wrap" style="margin-bottom: 15px;">
         <nav class="navbar navbar-default navbar-fixed-top row  row-centered" role="navigation">
             <div class="container-fluid col-centered col-lg-9 col-md-9 col-sm-10 col-xs-10">
@@ -84,15 +125,17 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
+        
         <div class="container">
-            <div id="viglet" class="row"></div>
-            <div class="row row-centered hidden-xs hidden-sm" style="margin-top: 140px;">
-                <div class="col-centered col-lg-9 col-md-9 col-sm-10 col-xs-10" style="text-align: center"> <img src="img/viglet_logo.png"> </div>
-            </div>
             <div>
-                <div class="row  row-centered">
-                    <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 col-centered" style="margin-top: 60px; margin-bottom: 80px; text-align: center; font-size: 20px; line-height: 150%">
-                        <p> Criando formas para permitir que a Inteligência Artificial seja acessível à todos. <a target="_blank" href="https://twitter.com/hashtag/IAParaTodos">#IAParaTodos</a>
+                <div class="row row-centered">
+                    <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 col-centered">
+                      <a id="viglet" target="_blank" href="https://twitter.com/hashtag/IAParaTodos">
+            <div class='cover-welcome img-rounded'> </div>
+        </a>  
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-sm-10 col-xs-10 col-centered" style="margin-top: 10px; margin-bottom: 80px; text-align: center; font-size: 25px; line-height: 150%">
+                        <p> Criando formas para permitir que a Inteligência Artificial seja acessível à todos.
                             <br> Olhamos para os novos desafios como uma grande oportunidade de encontrar soluções que sejam escaláveis e persistentes. </p>
                     </div>
                 </div>
@@ -110,7 +153,7 @@
                         <h1>Startups com um toque a mais</h1> </div>
                 </div>
                 <div class="row row-centered">
-                    <div class="col-lg-5  col-md-6 col-sm-7 col-xs-10 col-centered" style="text-align: center; margin-bottom: 50px;">
+                    <div class="col-lg-5  col-md-6 col-sm-7 col-xs-11 col-centered" style="text-align: center; margin-bottom: 50px;">
                         <div class="video-container">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLucp-3sa10A69EzbNiMDZmmo-Ai6MVuc9" frameborder="0" allowfullscreen></iframe>
                         </div>
