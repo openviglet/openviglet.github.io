@@ -82,6 +82,11 @@
             font-size: 16px;
             line-height: 150%
         }
+         .turing-text {
+            text-align: left;
+            font-size: 20px;
+            line-height: 150%
+        }
     }
     
     @media only screen and (min-width: 321px) {
@@ -108,9 +113,14 @@
             font-size: 20px;
             line-height: 150%
         }
+         .turing-text {
+            text-align: left;
+            font-size: 16px;
+            line-height: 150%
+        }
     }
     
-    @media only screen and (min-width: 1000px) {
+     @media only screen and (min-width: 1200px) {
         /* Styles */
         .cover-welcome {
             margin-top: 60px;
@@ -135,7 +145,13 @@
             font-size: 25px;
             line-height: 150%
         }
+        .turing-text {
+            text-align: left;
+            font-size: 18px;
+            line-height: 150%
+        }
     }
+    
 </style>
 
 <body data-spy="scroll" data-target=".navbar-default">
@@ -149,8 +165,8 @@
                 </div>
                 <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#viglet">Viglet.</a></li>
-                        <li><a href="#startups">Startups</a></li>
+                        <li><a href="#viglet">Viglet</a></li>
+                        <li><a href="#turing">Turing</a></li>
                         <li><a href="#participe">Participe</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -186,41 +202,26 @@
 						</h3> </div>
                     </div>
                 </a>
-                <div id="startups" class="row">
-                    <div class="col-lg-12" style="text-align: center; margin-top: 60px; padding-bottom: 50px;">
-                        <h1>Startups com um toque a mais</h1> </div>
-                </div>
-                <div class="row row-centered">
-                    <div class="col-lg-5  col-md-6 col-sm-7 col-xs-11 col-centered" style="text-align: center; margin-bottom: 50px;">
+                <div id="turing" class="row row-centered" style="padding-top:80px">
+                    <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 col-centered turing-text">
+                        <h1>Viglet Turing </h1>
+                        <p>Plataforma que utiliza processamento de linguagem natural (NLP) e aprendizado de máquina para fornecer dados mais inteligentes. Escolha seu NLP preferido como: CoreNLP, OpenNLP e OpenText Content Analytics, e indexe seus conteúdos no Solr com maior valor agregado. Treine e gere modelos para sua máquina de aprendizado, como Google Tensorflow.</p>
+                        <p><a class="github-button" href="https://github.com/openviglet/turing/wiki/Features" target="_blank" data-style="mega" aria-label="Funcionalidades do Viglet Turing no GitHub">Funcionalidades</a> <a class="github-button" href="https://github.com/openviglet/turing/wiki/Compatibility-Matrix" target="_blank" data-style="mega" aria-label="Matriz de Compatibilidade do Viglet Turing no GitHub">Matriz de Compatibilidade</a></p>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-10 col-xs-10 col-centered" style="text-align: right">
                         <div class="video-container">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLucp-3sa10A69EzbNiMDZmmo-Ai6MVuc9" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="row row-centered">
-                    <div class="col-lg-7 col-md-6 col-sm-10 col-xs-11 col-centered" style="text-align: right">
-                        <h3>Viglet Turing</h3>
-                        <p> <a class="github-button" href="https://github.com/openviglet/turing" data-style="mega" aria-label="Acompanhe openviglet/turing no GitHub">Acompanhe</a> </p>
-                        <p>Plataforma que utiliza processamento de linguagem natural (NLP) e aprendizado de máquina para fornecer dados mais inteligentes. Escolha seu NLP preferido como: CoreNLP e OpenText Content Analytics, e indexe seus conteúdos no Solr com maior valor agregado. Treine e gere modelos para sua máquina de aprendizado, como Google Tensorflow.</p>
-                    <p>Fique por dentro: <a href="https://github.com/openviglet/turing/wiki/Features" target="_blank">Funcionalidades</a> e <a href="https://github.com/openviglet/turing/wiki/Compatibility-Matrix" target="_blank">Matriz de Compatibilidade</a>.</p></div>
-                    <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm" style="text-align: right"> <img src="img/turing.jpg" alt="Turing" width="180" height="180" class="img-circle"> </div>
-                </div>
-                <div class="row row-centered">
-                    <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm"> <img src="img/mashups.jpg" alt="Recygram" width="180" height="180"> </div>
-                    <div class="col-lg-7 col-md-6 col-sm-10 col-xs-11 col-centered">
-                        <h3>Viglet Mashups</h3>
-                        <p> <a class="github-button" href="https://github.com/openviglet/mashups" data-style="mega" aria-label="Acompanhe openviglet/mashups no GitHub">Acompanhe</a> </p>
-                        <p>Integre soluções de forma simples e intuitiva, ganhando tempo usando melhores práticas. Utilize Fluxo e plugins desenvolvidos pela comunidade para maximizar a reutilização dos seus dados. Suporte a Máquina de Aprendizado, NLP, Search Engine e Banco de Dados.</p>
-                    </div>
-                </div>
-                <div id="participe" class="row row-centered" style="margin-top: 150px">
+                <div id="participe" class="row row-centered" style="margin-top: 80px">
                     <div class="col-lg-6 col-md-9 col-sm-10 col-xs-11 col-centered jumbotron" style="text-align: center; min-height: 400px">
                         <h1>Participe e desenvolva</h1>
                         <p style="margin-bottom: 20px">Colabore com o desenvolvimento do <b>Viglet Turing</b>. Desta maneira, vocês estará ajudando a criar formas de permitir que a Inteligência Artificial seja acessível à todos. </p> <a href="https://goo.gl/forms/Sp9Kp7Rynp8J4Jgg2" target="_blank" class="btn btn-warning btn-lg btn-block" role="button" aria-pressed="true">Sim, quero participar!</a> </div>
-                    <div class="col-lg-3 col-md-9 col-sm-10 col-xs-12 col-centered" >
+                    <div class="col-lg-3 col-md-9 col-sm-10 col-xs-12 col-centered">
                         <div class="panel panel-default">
                             <div class="row panel-heading" style="margin:0px">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:calc(100% - 15px);padding:0px">Acompanhe o progresso do desenvolvimento do Viglet Turing</div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="width:calc(100% - 15px);padding:0px">Acompanhe o progresso do desenvolvimento do Viglet Turing </div>
                                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="width:15px;padding:0px">
                                     <a target="_blank" href="https://bitbucket.org/sumware/viglet-turing/rss?token=0cce26757ed49fa69e894668377cffc6"><img src="img/feed.png" width="15px" height="15px"></a>
                                 </div>
