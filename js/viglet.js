@@ -14,7 +14,7 @@
 														, 'ddd, DD MMM YY HH:mm:ss ZZ'];
 	        var date = new Date(item.pubDate);
 	        var strDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
-	        var momentDate = moment(item.pubDate, formats).locale('pt').fromNow();
+	        var momentDate = moment(item.pubDate, formats).locale('en').fromNow();
 	        $('#turingfeed').append($('<div style="margin-top:20px">').html(item.title.replace(/\n/g,"<br>"))).append($('<small>').html(momentDate));
 	    });
 	});
