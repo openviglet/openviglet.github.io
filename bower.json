@@ -18,6 +18,7 @@
   "dependencies": {
     "bootstrap": "*",
     "moment": "*",
-    "font-awesome": "*"
+    "font-awesome": "*",
+    "angular": "1.5.8"
   }
 }

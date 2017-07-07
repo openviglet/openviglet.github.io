@@ -1,3 +1,20 @@
+.fa-viglet {
+    color: #FF874B;
+}
+
+.fa-viglet:hover {
+    color: #FF691F;
+}
+
+.btn-viglet {
+    background-color: #FF874B;
+    color: white;
+}
+
+.btn-viglet:hover {
+    background-color: #FF691F;
+    color: white;
+}
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
