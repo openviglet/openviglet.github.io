@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "bootstrap": "*",
-    "moment": "*"
+    "moment": "*",
+    "font-awesome": "*"
   }
 }
