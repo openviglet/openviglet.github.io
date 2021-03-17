@@ -1,7 +1,2 @@
 User-agent: *
-Disallow: /css
-Disallow: /fonts
-Disallow: /img
-Disallow: /js
-Disallow: /swf
-Disallow: /thirdparty
+Disallow:

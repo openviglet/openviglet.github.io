@@ -1,0 +1,18 @@
+
+[
+{
+    "name": ""
+    , "notes": [ 
+		"[New] Generate Keys and Access Tokens.", 
+		"[New] Login and Logout.", 
+		"[New] Look and Feel.", 
+		"[New] Login Page and Authentication.",
+		"[New] OnStartup Feature.",
+		"[New] AngularJS: Cookie and Resource.", 
+		"[Improved] HTML files were moved to template folder.",
+		"[Improved] Users, Groups and Roles Improvements.",
+		"[Improved] Spring Boot 2.2.2.",
+        "[Improved] Gradle 6.0.1."]
+    , "pub_date": "2019-12-17T12:00:00Z"
+    , "version": "0.3.2"
+}]

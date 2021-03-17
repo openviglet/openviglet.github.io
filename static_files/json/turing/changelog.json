@@ -1,0 +1,23 @@
+
+[
+{
+    "name": ""
+    , "notes": ["[New] Unit Test.", 
+		"[New] SpaCy Plugin.", 
+		"[New] DockerFile.", 
+		"[New] SN Site: Import.", 
+		"[New] Export SN Site.",
+		"[New] Default Fields into Search.",
+		"[New] NLP and Thesaurus Activation.", 
+		"[New] Dynamic Fields: Text, Description and Date.", 
+		"[New] SN: MaxRows.",
+		"[New] Deindexing by Type.",
+		"[Improved] Check Box fields on SN were fixed.",
+		"[Improved] Using lib instead of modules.",
+		"[Improved] Release Resources: HTTPClient and SolrServer.",
+		"[Improved] SNSite using UUID.",
+		"[Improved] Remove newline and trim to concatenated Text.",
+		"[Improved] Spring Boot 2.1.2."]
+    , "pub_date": "2019-02-08T12:00:00Z"
+    , "version": "0.3.2"
+}]
