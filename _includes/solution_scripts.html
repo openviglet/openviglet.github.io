@@ -1,0 +1,24 @@
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+ <script src="/static_files/thirdparty/jquery/dist/jquery.min.js"></script> 
+ <!-- Include all compiled plugins (below), or include individual files as needed --> 
+ <script src="/static_files/thirdparty/bootstrap/dist/js/bootstrap.min.js"></script> 
+ <script src="/static_files/thirdparty/moment/min/moment-with-locales.min.js"></script> 
+ <script src="/static_files/thirdparty/angular/angular.min.js"></script> 
+ <script src="/static_files/js/viglet.js"></script> 
+ <script src="/static_files/js/viglet-app.js"></script> 
+ <script async defer src="https://buttons.github.io/buttons.js"></script>  
+ <script>
+     $.getJSON("https://api.github.com/users/{{ page.github-org }}/events", function (data) {
+    var items = [];
+    $.each(data, function (i, item) {
+        $.each(item.payload.commits, function (i2, item2) {
+            var formats = ['YYYY-MM-DDTHH:mm:ssZ', 'YYYY-MM-DDTHH:mm:ssZ'];
+            var momentDate = moment(item.created_at, formats).locale('en').fromNow();
+            $('#vigletfeed').append($('<div style="margin-top:10px">').html($('<a target="_blank" style="font-size:small" href=https://github.com/' + item.repo.name + '>').html(item.repo.name.replace("openturing/", "") + "/" + item.payload.ref.replace("refs/heads/","")))).append($('<div>').html('<a style="color:black" target="_blank" href="' + item2.url.replace("https://api.github.com/repos/openturing/", "https://github.com/openturing/").replace("commits", "commit") + '">' + item2.message.replace(/\n/g, "<br>") + '</a>')).append($('<small>').html('<a href="https://github.com/' + item.actor.login + '" target="_blank" >' + item.actor.display_login + '</a>' + " - " + momentDate));
+        });
+    });
+});
+$('body').scrollspy({
+    target: '.navbar-default'
+})
+ </script>

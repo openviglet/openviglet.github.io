@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+{%- include head.html -%}
+
+<body data-spy="scroll" data-target=".navbar-default" ng-controller="VigHomeCtrl">
+  <div id="wrap" style="margin-bottom: 15px;">
+
+    {%- include header.html -%}
+
+    <div class="container">
+      {{ content }}
+    </div>
+
+  </div>
+
+  {%- include footer.html -%}
+
+</body>
+
+</html>

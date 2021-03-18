@@ -1,0 +1,124 @@
+---
+layout: default
+---
+<div>
+    <nav class="navbar navbar-default row  row-centered" role="navigation" style="margin:0px;">
+        <div class="container-fluid col-centered col-lg-9 col-md-9 col-sm-10 col-xs-10">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" href="#">
+                    <div class="navbar-header pull-right hidden-xs"
+                        style="margin-right:5px;margin-top: 2px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+                        <div
+                            style="background: {{ page.main-color }};width: 40px;height: 40px;color: navajowhite;padding-top: 2px;padding-left: 4px;font-size: 18px;font-weight: bolder; border-width: 1px; border-style: solid;border-radius: 5px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);">
+                            <div style="margin-top: 8px;">
+                                {{ page.logo-acronym }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a class="navbar-brand" href="#">
+                    <div
+                        style="margin-top: 20px;margin-left: 20px;color: #444;font-size: 20px;line-height: 1;letter-spacing: .02em;font-weight: 700;">
+                        {{ page.short-name }}
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-header pull-right">
+                <div class="row" style="margin:0px">
+                    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
+                        <a title="GitHub" href="{{ page.github }}" target="_blank"><i
+                                class="fa fa-github fa-2x fa-viglet" style="color:{{ page.main-color }}"
+                                aria-hidden="true"></i></a>
+                    </div>                   
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 40px;">
+        <div>
+            <div class="row row-centered" style="margin:0px">
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered" style="margin: 0px; padding: 0px;">
+                    <div style="text-align: center;margin-bottom: 20px">
+                        <div
+                            style="letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;display: inline-block;text-align: left;">
+                            <div
+                                style="background: {{ page.main-color }};width: 280px;height: 280px;color: navajowhite;padding-left: 25px;font-size: 135px;font-weight: bolder;border-width: 8px;border-style: solid;-moz-border-radius: 52px;border-radius: 30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19">
+                                <div style="font-size: 35px;margin-top: 11px;margin-right: 25px;font-weight: lighter;"
+                                    class="pull-right">
+                                    {{ page.logo-section }}
+                                </div>
+                                <div style="margin-top: 64px;" id="shlogo">
+                                    <span>{{ page.logo-acronym }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="font-size:40px;text-align:center;line-height: 120%;">
+                        <b>{{ page.full-name }}</b>
+                    </div>
+                    <div style="font-size:30px;text-align:center;line-height: 120%;margin-top:20px;margin-bottom:40px">
+                        {{ page.description }}
+                    </div>
+                    <form class="form-inline row-centered" style="margin:0px;margin-bottom:70px">
+                        <a href="{{ page.get-started }}" class="btn btn-viglet btn-lg"
+                            style="margin: 7px;width:200px;background: {{ page.main-color }};color:navajowhite !important">Get
+                            Started</a>
+                        <a href="download" class="btn btn-default btn-lg"
+                            style="margin: 7px;color:#444;width:200px">Download {{ page.release }}</a>
+                        <a href="release-notes" class="btn btn-default btn-lg"
+                            style="margin: 7px;color:#444;width:200px">Release Notes</a>
+                    </form>
+                </div>
+            </div>
+            <div class="row row-centered" style="margin:0px">
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered">
+                    <div class="row row-centered" style="margin:0px">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 col-centered ">
+                            <div>
+                                {% assign filtered_features = site.features | where:"solution", page.id %}
+                                {% for feature in filtered_features %}
+                                <div class="jumbotron" style="padding-left: 40px;padding-right: 40px;">
+                                    <div class="container">
+                                        <h1 style="color:{{ page.main-color }}">{{ feature.title }}</h1>
+                                        <p style="color:black;line-height: 29px">{{ feature.content }}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
+                            <div>
+                                <div class="panel panel-default">
+                                    <a class="twitter-timeline" data-height="750" data-theme="light"
+                                        data-link-color="#ff6347"
+                                        href="{{ page.twitter-url }}?ref_src=twsrc%5Etfw">Tweets by shiocms</a>
+                                    <script async src="https://platform.twitter.com/widgets.js"
+                                        charset="utf-8"></script>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="row panel-heading" style="margin:0px">
+                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"
+                                            style="width:calc(100% - 100px);padding:0px">
+                                            Track the progress of {{ page.short-name }} development
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"
+                                            style="width:50px;padding:0px;margin-left:10px">
+                                            <a href="{{ page.travis-url }}" target="_blank"><img
+                                                    src="{{ page.travis-url }}.svg?branch=master"></a>
+                                        </div>
+                                    </div>
+                                    <div id="vigletfeed" class="panel-body"
+                                        style="text-align: left; overflow-y: auto; max-height: 466px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- include solution_scripts.html -%}
