@@ -1,7 +1,9 @@
 ---
 layout: solution
 title: Turing
-id: turing
+status: stable
+order: 1
+identifier: turing
 permalink: /turing/
 get-started: https://turing.readme.io/
 github: https://github.com/openturing
@@ -15,4 +17,9 @@ full-name: Viglet Turing AI
 description: Semantic Navigation, Chatbot using Search Engine and Many NLP Vendors.
 travis-url: https://travis-ci.com/openturing/turing
 twitter-url: https://twitter.com/VigletTuring
+download-message: Download Turing AI and add more value to your content.
+download-size: 159 MB
+download-url: https://github.com/openturing/turing/releases/download/v0.3.2/viglet-turing.jar
+run-jar: viglet-turing.jar
+run-port: 2700
 ---

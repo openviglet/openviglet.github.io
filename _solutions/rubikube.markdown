@@ -1,8 +1,9 @@
 ---
 layout: solution
 title: Rubikube
-id: rubikube
-permalink: /rubikube2/
+identifier: rubikube
+order: 6
+permalink: /rubikube/
 github: https://github.com/Rubikube
 github-org: rubikube
 main-color: darkslategray
@@ -11,4 +12,5 @@ logo-section: Container
 short-name: Rubikube Container
 full-name: Viglet Rubikube Container
 description: Delivering Kubernetes-as-a-Service.
+twitter-url: https://twitter.com/openviglet
 ---

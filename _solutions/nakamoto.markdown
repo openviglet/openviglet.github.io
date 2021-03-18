@@ -1,8 +1,9 @@
 ---
 layout: solution
 title: Nakamoto
-id: nakamoto
-permalink: /nakamoto2/
+identifier: nakamoto
+order: 5
+permalink: /nakamoto/
 github: https://github.com/opennakamoto
 github-org: opennakamoto
 main-color: hotpink
@@ -11,4 +12,5 @@ logo-section: Ledger
 short-name: Nakamoto Ledger
 full-name: Viglet Nakamoto Ledger
 description: Decentralized, distributed, digital ledger.
+twitter-url: https://twitter.com/openviglet
 ---

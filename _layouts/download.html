@@ -1,0 +1,72 @@
+---
+layout: default
+---
+<div>
+    {% assign solution = site.solutions | where:"identifier", page.identifier | first %}
+    {%- include solution-menu.html -%}
+    <div class="container" style="padding: 0px">
+        <div class="row row-centered" style="margin:0px;background:{{ solution.main-color }};color: navajowhite">
+            <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered" style="padding:80px">
+                <div style="font-size:70px;text-align:center;line-height: 120%;">
+                    <b>Get {{ solution.short-name }}</b>
+                </div>
+                <div style="font-size:30px;text-align:center;line-height: 120%;">
+                    {{ solution.description }}
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin:0px">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px">
+                <div style="font-size:50px;text-align:center;line-height: 120%">
+                    <b>Only 3 steps to run for free</b>
+                </div>
+                <div style="font-size:30px;text-align:center;line-height: 120%;color:gray;padding-bottom:30px">
+                    {{ solution.download-message }}
+                </div>
+                <div style="text-align: center;margin-bottom: 20px;">
+                    <a href="{{ solution.download-url }}" class="btn btn-viglet btn-lg"
+                        style="background: {{ solution.main-color }};margin: 7px;color:navajowhite !important">Download
+                        {{ solution.short-name }} {{ solution.short-release }}</a>
+                    <div style="text-align: center;font-size: smaller;">
+                        .jar - {{ solution.download-size }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-centered" style="margin:0px;padding-bottom:50px">
+            <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered">
+                <div class="row row-centered" style="margin:0px;">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-centered " style="margin-bottom:40px">
+                        <h1>Requirements</h1>
+                        <p style="font-size: 18px;">{{ solution.short-name }} was developed using Java. So you need the
+                            Java 8 or higher. It can run on
+                            both Linux and Windows.</p>
+                        <h1 style="margin-top:40px">Documentation</h1>
+                        <p style="font-size: 18px;">Wondering how {{ solution.short-name }} works? Read documentation at
+                            <a href="{{ solution.get-started }}" target="_blank">{{ solution.get-started }}</a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-centered ">
+                        <h1>Installation</h1>
+                        <p style="font-size: 18px;">You need only 5 minutes to install {{ solution.short-name }}, so run
+                            the three steps below:</p>
+                        <blockquote>
+                            <ol>
+                                <li style="margin-bottom: 10px;">Download {{ solution.short-name }}</li>
+                                <li style="margin-bottom: 10px;">From your terminal, run:</li>
+                                <div style="font-size:small">
+                                    <samp style="font-size: 18px;">java -jar {{ solution.run-jar }}</samp>
+                                </div>
+                                <li style="margin-top:  10px;margin-bottom: 10px;">Point your browser to
+                                    http://localhost:{{ solution.run-port }}</li>
+                            </ol>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%- if page.youtube-playlist-id -%}
+            {%- include videos.html -%}
+        {%- endif -%}
+    </div>
+</div>
+{%- include solution-scripts.html -%}

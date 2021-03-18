@@ -1,7 +1,8 @@
 ---
 layout: solution
 title: Compass
-id: compass
+identifier: compass
+order: 3
 permalink: /compass/
 github: https://github.com/CompassDXP
 github-org: compassdxp

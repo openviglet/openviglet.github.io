@@ -1,7 +1,8 @@
 ---
 layout: solution
 title: Darwin
-id: darwin
+identifier: darwin
+order: 4
 permalink: /darwin/
 github: https://github.com/opendarwin
 github-org: opendarwin
@@ -11,4 +12,5 @@ logo-section: Data
 short-name: Darwin Data
 full-name: Viglet Darwin Data
 description: Data Governance and Metadata framework.
+twitter-url: https://twitter.com/openviglet
 ---

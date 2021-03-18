@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default row  row-centered" role="navigation" style="margin:0px;">
+    <div class="container-fluid col-centered col-lg-9 col-md-9 col-sm-10 col-xs-10">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand" href="{{ solution.permalink }}">
+                <div class="navbar-header pull-right hidden-xs"
+                    style="margin-right:5px;margin-top: 2px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+                    <div
+                        style="background: {{ solution.main-color }};width: 40px;height: 40px;color: navajowhite;padding-top: 2px;padding-left: 4px;font-size: 18px;font-weight: bolder; border-width: 1px; border-style: solid;border-radius: 5px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);">
+                        <div style="margin-top: 8px;">
+                            {{ solution.logo-acronym }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="navbar-brand" href="{{ solution.permalink }}">
+                <div
+                    style="margin-top: 20px;margin-left: 20px;color: #444;font-size: 20px;line-height: 1;letter-spacing: .02em;font-weight: 700;">
+                    {{ solution.short-name }}
+                </div>
+            </a>
+        </div>
+        <div class="navbar-header pull-right">
+            <div class="row" style="margin:0px">
+                {%- if solution.github -%}
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
+                    <a title="GitHub" href="{{ solution.github }}" target="_blank"><i class="fa fa-github fa-2x fa-viglet"
+                            style="color:{{ solution.main-color }}" aria-hidden="true"></i></a>
+                </div>
+                {%- endif -%}
+                {%- if solution.slack-url -%}
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
+                    <a title="Community" href="{{ solution.slack-url }}" target="_blank"><i
+                            class="fa fa-comments fa-2x fa-viglet" style="color:{{ solution.main-color }}"
+                            aria-hidden="true"></i></a>
+                </div>
+                {%- endif -%}
+                {%- if solution.twitter-url -%}
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
+                    <a title="GitHub" href="{{ solution.twitter-url }}" target="_blank"><i
+                            class="fa fa-twitter fa-2x fa-viglet" style="color:{{ solution.main-color }}"
+                            aria-hidden="true"></i></a>
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+</nav>
