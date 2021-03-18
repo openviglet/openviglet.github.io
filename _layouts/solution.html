@@ -26,11 +26,19 @@ layout: default
             </div>
             <div class="navbar-header pull-right">
                 <div class="row" style="margin:0px">
+                    {%- if page.github -%}
                     <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
                         <a title="GitHub" href="{{ page.github }}" target="_blank"><i
                                 class="fa fa-github fa-2x fa-viglet" style="color:{{ page.main-color }}"
                                 aria-hidden="true"></i></a>
-                    </div>                   
+                    </div>
+                    {%- endif -%}
+                    {%- if page.twitter-url -%}
+                    <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
+                        <a title="GitHub" href="{{ page.twitter-url }}" target="_blank"><i
+                                class="fa fa-twitter fa-2x fa-viglet" style="color:{{ page.main-color }}" aria-hidden="true"></i></a>
+                    </div>
+                    {%- endif -%}
                 </div>
             </div>
             <!-- /.container-fluid -->
@@ -62,22 +70,28 @@ layout: default
                         {{ page.description }}
                     </div>
                     <form class="form-inline row-centered" style="margin:0px;margin-bottom:70px">
+                        {%- if page.get-started -%}
                         <a href="{{ page.get-started }}" class="btn btn-viglet btn-lg"
                             style="margin: 7px;width:200px;background: {{ page.main-color }};color:navajowhite !important">Get
                             Started</a>
+                        {%- endif -%}
+                        {%- if page.release -%}
                         <a href="download" class="btn btn-default btn-lg"
                             style="margin: 7px;color:#444;width:200px">Download {{ page.release }}</a>
                         <a href="release-notes" class="btn btn-default btn-lg"
                             style="margin: 7px;color:#444;width:200px">Release Notes</a>
+                        {%- endif -%}
                     </form>
                 </div>
             </div>
             <div class="row row-centered" style="margin:0px">
                 <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered">
                     <div class="row row-centered" style="margin:0px">
+                        {% assign filtered_features = site.features | where:"solution", page.id %}
+                        {%- if filtered_features.size > 0 -%}
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 col-centered ">
                             <div>
-                                {% assign filtered_features = site.features | where:"solution", page.id %}
+
                                 {% for feature in filtered_features %}
                                 <div class="jumbotron" style="padding-left: 40px;padding-right: 40px;">
                                     <div class="container">
@@ -88,8 +102,10 @@ layout: default
                                 {% endfor %}
                             </div>
                         </div>
+                        {%- endif -%}
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
                             <div>
+                                {%- if page.twitter-url -%}
                                 <div class="panel panel-default">
                                     <a class="twitter-timeline" data-height="750" data-theme="light"
                                         data-link-color="#ff6347"
@@ -97,7 +113,9 @@ layout: default
                                     <script async src="https://platform.twitter.com/widgets.js"
                                         charset="utf-8"></script>
                                 </div>
-                                <div class="panel panel-default">
+                                {%- endif -%}
+                                {%- if page.github -%}
+                                <div id="vigletfeedbox" class="panel panel-default">
                                     <div class="row panel-heading" style="margin:0px">
                                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"
                                             style="width:calc(100% - 100px);padding:0px">
@@ -105,14 +123,17 @@ layout: default
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                             style="width:50px;padding:0px;margin-left:10px">
+                                            {%- if page.travis-url -%}
                                             <a href="{{ page.travis-url }}" target="_blank"><img
                                                     src="{{ page.travis-url }}.svg?branch=master"></a>
+                                            {%- endif -%}
                                         </div>
                                     </div>
                                     <div id="vigletfeed" class="panel-body"
                                         style="text-align: left; overflow-y: auto; max-height: 466px">
                                     </div>
                                 </div>
+                                {%- endif -%}
                             </div>
                         </div>
                     </div>
