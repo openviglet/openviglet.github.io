@@ -7,7 +7,7 @@ identifier: shio
 permalink: /shio/
 get-started: https://shio.readme.io/
 github: https://github.com/ShioCMS
-github-org: shiocms
+github-org: ShioCMS
 release: 0.3.7
 main-color: tomato
 logo-acronym: Sh

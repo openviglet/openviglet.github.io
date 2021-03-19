@@ -5,7 +5,7 @@ identifier: compass
 order: 3
 permalink: /compass/
 github: https://github.com/CompassDXP
-github-org: compassdxp
+github-org: CompassDXP
 main-color: black
 logo-acronym: Co.
 logo-section: DXP

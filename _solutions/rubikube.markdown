@@ -5,7 +5,7 @@ identifier: rubikube
 order: 6
 permalink: /rubikube/
 github: https://github.com/Rubikube
-github-org: rubikube
+github-org: Rubikube
 main-color: darkslategray
 logo-acronym: Ru
 logo-section: Container
