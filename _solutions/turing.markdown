@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Turing
+title: Viglet Turing AI
 status: stable
 order: 1
 identifier: turing

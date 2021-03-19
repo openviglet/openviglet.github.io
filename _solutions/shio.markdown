@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Shio
+title: Viglet Shio CMS
 status: stable
 order: 2
 identifier: shio
