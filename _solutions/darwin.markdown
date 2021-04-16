@@ -13,4 +13,5 @@ short-name: Darwin Data
 full-name: Viglet Darwin Data
 description: Data Governance and Metadata framework.
 twitter-url: https://twitter.com/openviglet
+social-image: https://avatars.githubusercontent.com/u/49767978?s=280&amp;v=4
 ---

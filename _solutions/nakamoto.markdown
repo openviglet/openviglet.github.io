@@ -13,4 +13,5 @@ short-name: Nakamoto Ledger
 full-name: Viglet Nakamoto Ledger
 description: Decentralized, distributed, digital ledger.
 twitter-url: https://twitter.com/openviglet
+social-image: https://avatars.githubusercontent.com/u/57295174?s=280&amp;v=4
 ---
