@@ -11,6 +11,6 @@ logo-acronym: Ga
 logo-section: Money
 short-name: Gauss Money
 full-name: Viglet Gauss Money
-description: Money in an uncomplicated way
+description: Money in an uncomplicated way.
 twitter-url: https://twitter.com/openviglet
 ---
