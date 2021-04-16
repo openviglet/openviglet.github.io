@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Rubikube
+title: Viglet Rubikube Container
 identifier: rubikube
 order: 6
 permalink: /rubikube/

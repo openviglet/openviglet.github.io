@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Darwin
+title: Viglet Darwin Data
 identifier: darwin
 order: 4
 permalink: /darwin/

@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Gauss
+title: Viglet Gauss Money
 identifier: gauss
 order: 5
 permalink: /gauss/

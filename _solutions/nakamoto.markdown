@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Nakamoto
+title:  Viglet Nakamoto Ledger
 identifier: nakamoto
 order: 5
 permalink: /nakamoto/

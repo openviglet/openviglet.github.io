@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Compass
+title: Viglet Compass DXP
 identifier: compass
 order: 3
 permalink: /compass/

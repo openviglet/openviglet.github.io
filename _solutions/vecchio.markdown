@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Viglet Turing AI
+title: Viglet Vecchio AI
 status: stable
 order: 0
 identifier: vecchio
