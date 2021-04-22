@@ -58,11 +58,7 @@ social-image: "https://viglet.com/static_files/img/viglet_logo_hd.png"
                                     <samp style="font-size: 18px;">java -jar {{ solution.run-jar }}</samp>
                                 </div>
                                 <li style="margin-top:  10px;margin-bottom: 10px;">Point your browser to
-                                    http://localhost:{{ solution.run-port }}</li>
-                                {%- if solution.app-login -%}    
-                                <li style="margin-top:  10px;margin-bottom: 10px;">Login/Pssword:
-                                        {{ solution.app-login }}/{{ solution.app-password }}</li>
-                                {%- endif -%}
+                                    http://localhost:{{ solution.run-port }}. {%- if solution.app-login -%} Use the login/password: {{ solution.app-login }}/{{ solution.app-password }} {%- endif -%}</li>
                             </ol>
                         </blockquote>
                     </div>
