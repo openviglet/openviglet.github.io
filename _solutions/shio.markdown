@@ -24,5 +24,7 @@ download-size: 155 MB
 download-url: https://github.com/ShioCMS/shio/releases/download/v0.3.7/viglet-shio.jar
 run-jar: viglet-shio.jar
 run-port: 2710
+app-login: admin
+app-password: admin
 social-image: https://avatars.githubusercontent.com/u/38250020?s=280&amp;v=4
 ---

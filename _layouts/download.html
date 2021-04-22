@@ -59,6 +59,10 @@ social-image: "https://viglet.com/static_files/img/viglet_logo_hd.png"
                                 </div>
                                 <li style="margin-top:  10px;margin-bottom: 10px;">Point your browser to
                                     http://localhost:{{ solution.run-port }}</li>
+                                {%- if solution.app-login -%}    
+                                <li style="margin-top:  10px;margin-bottom: 10px;">Login/Pssword:
+                                        {{ solution.app-login }}/{{ solution.app-password }}</li>
+                                {%- endif -%}
                             </ol>
                         </blockquote>
                     </div>
