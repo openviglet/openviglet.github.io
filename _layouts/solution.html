@@ -101,9 +101,9 @@ layout: default
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"
                                             style="width:50px;padding:0px;margin-left:10px">
-                                            {%- if page.travis-url -%}
-                                            <a href="{{ page.travis-url }}" target="_blank"><img
-                                                    src="{{ page.travis-url }}.svg?branch=master"></a>
+                                            {%- if page.github-ci -%}
+                                            <a href="{{ page.github-ci-url }}" target="_blank"><img
+                                                    src="{{ page.github-ci-url }}/badge.svg"></a>
                                             {%- endif -%}
                                         </div>
                                     </div>

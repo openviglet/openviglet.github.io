@@ -15,7 +15,7 @@ logo-section: AI
 short-name: Turing AI
 full-name: Viglet Turing AI
 description: Semantic Navigation, Chatbot using Search Engine and Many NLP Vendors.
-travis-url: https://travis-ci.com/openturing/turing
+github-ci-url: https://github.com/openturing/turing/actions/workflows/build.yml
 twitter-url: https://twitter.com/VigletTuring
 download-message: Download Turing AI and add more value to your content.
 download-size: 159 MB

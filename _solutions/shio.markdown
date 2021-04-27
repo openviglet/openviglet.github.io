@@ -15,7 +15,7 @@ logo-section: CMS
 short-name: Shio CMS
 full-name: Viglet Shio CMS
 description: Model Content, Use GraphQL and Create Site using Javascript with Native Cache and Search.
-travis-url: https://travis-ci.com/ShioCMS/shio
+github-ci-url: https://github.com/ShioCMS/shio/actions/workflows/build.yml
 twitter-url: https://twitter.com/shiocms
 slack-url: https://shiocms.slack.com
 youtube-playlist-id: PLucp-3sa10A40BeGVAvLChPwONTfQ0nmY
