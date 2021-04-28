@@ -1,3 +1,35 @@
+#shlogo span {
+    animation: glow 2s ease-in-out both infinite;
+}
+
+#shlogo span:nth-child(1) {
+    animation-delay: -0.2857142857s;
+}
+
+#shlogo span:nth-child(2) {
+    animation-delay: -0.5714285714s;
+}
+
+#shlogo span:nth-child(3) {
+    animation-delay: -0.8571428571s;
+}
+
+#shlogo span:nth-child(4) {
+    animation-delay: -1.1428571429s;
+}
+
+#shlogo span:nth-child(5) {
+    animation-delay: -1.4285714286s;
+}
+
+#shlogo span:nth-child(6) {
+    animation-delay: -1.7142857143s;
+}
+
+.shglow span:nth-child(7) {
+    animation-delay: -2s;
+}
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
