@@ -1,118 +1,117 @@
 ---
 layout: default
 ---
-<div>
-    {% assign solution = page %}
-    {%- include solution-menu.html -%}
-    <div class="container" style="margin-top: 40px;">
-        <div>
-            <div class="row row-centered" style="margin:0px">
-                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered" style="margin: 0px; padding: 0px;">
-                    <div style="text-align: center;margin-bottom: 20px">
-                        <div
-                            style="letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;display: inline-block;text-align: left;">
-                            <div
-                                style="background: {{ page.main-color }};width: 280px;height: 280px;color: navajowhite;padding-left: 25px;font-size: 135px;font-weight: bolder;border-width: 8px;border-style: solid;-moz-border-radius: 52px;border-radius: 30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
-                                <div style="font-size: 35px;margin-top: 11px;margin-right: 25px;font-weight: lighter;"
-                                    class="pull-right">
-                                    {{ page.logo-section }}
-                                </div>
-                                <div style="margin-top: 64px;" id="shlogo">
-                                    <span>{{ page.logo-acronym }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="font-size:40px;text-align:center;line-height: 120%;">
-                        <b>{{ page.full-name }}</b>
-                    </div>
-                    <div style="font-size:30px;text-align:center;line-height: 120%;margin-top:20px;margin-bottom:40px">
-                        {{ page.description }}
-                    </div>
-                    <form class="form-inline row-centered" style="margin:0px;margin-bottom:70px">
-                        {%- if page.get-started -%}
-                        <div class="btn-group" style="margin: 7px;">
-                            <a href="{{ page.get-started }}" target="_blank" class="btn btn-lg"
-                                style="width:165px;background: {{ page.main-color }};color:navajowhite !important">Get
-                                Started</a>
-                            {%- if page.pdf-get-started -%}
-                            <a class="btn btn-lg dropdown-toggle" data-toggle="dropdown" href=""
-                                style="background: {{ page.main-color }};color:navajowhite !important"><span
-                                    class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="{{ page.pdf-get-started }}" target="_blank">Developer Guide (PDF)</a> </li>
-                            </ul>
-                            {%- endif -%}
-                        </div>
-                        {%- endif -%}
-                        {%- if page.release -%}
-                        <a href="download" class="btn btn-default btn-lg"
-                            style="margin: 7px;color:#444;width:200px">Download {{ page.release }}</a>
-                        <a href="release-notes" class="btn btn-default btn-lg"
-                            style="margin: 7px;color:#444;width:200px">Release Notes</a>
-                        {%- endif -%}
-                    </form>
-                </div>
-            </div>
-            {%- if page.youtube-playlist-id -%}
-            {%- include videos.html -%}
-            {%- endif -%}
-            <div class="row row-centered" style="margin:0px">
-                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 col-centered" style="text-align: left;">
-                    {{ page.content }}
-                </div>
-            </div>
-            <div class="row row-centered" style="margin:0px">
-                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered">
-                    <div class="row row-centered" style="margin:0px">
-                        {% assign filtered_features = site.features | where:"solution", page.identifier %}
-                        {%- if filtered_features.size > 0 -%}
-                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 col-centered ">
-                            <div>
 
-                                {% for feature in filtered_features %}
-                                <div class="jumbotron" style="padding-left: 40px;padding-right: 40px;">
-                                    <div class="container">
-                                        <h1 style="color:{{ page.main-color }}">{{ feature.title }}</h1>
-                                        <p style="color:black;line-height: 29px">{{ feature.content }}</p>
-                                    </div>
-                                </div>
-                                {% endfor %}
+{% assign solution = page %}
+{%- include solution-menu.html -%}
+<div class="container" style="margin-top: 40px;">
+    <div>
+        <div class="row text-center" style="margin:0px;display: inherit;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered" style="margin: 0px; padding: 0px;">
+                <div style="text-align: center;margin-bottom: 20px">
+                    <div
+                        style="letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;display: inline-block;text-align: left;">
+                        <div
+                            style="background: {{ page.main-color }};width: 280px;height: 280px;color: navajowhite;padding-left: 25px;font-size: 135px;font-weight: bolder;border-width: 8px;border-style: solid;-moz-border-radius: 52px;border-radius: 30px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+                            <div style="font-size: 35px;margin-top: 11px;margin-right: 25px;font-weight: lighter;"
+                                class="pull-right">
+                                {{ page.logo-section }}
+                            </div>
+                            <div style="margin-top: 64px;" id="shlogo">
+                                <span>{{ page.logo-acronym }}</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div style="font-size:40px;text-align:center;line-height: 120%;">
+                    <b>{{ page.full-name }}</b>
+                </div>
+                <div style="font-size:30px;text-align:center;line-height: 120%;margin-top:20px;margin-bottom:40px">
+                    {{ page.description }}
+                </div>
+                <form class="form-inline text-center" style="margin:0px;margin-bottom:70px">
+                    {%- if page.get-started -%}
+                    <div class="btn-group" style="margin: 7px;">
+                        <a href="{{ page.get-started }}" target="_blank" class="btn btn-lg"
+                            style="width:165px;background: {{ page.main-color }};color:navajowhite !important">Get
+                            Started</a>
+                        {%- if page.pdf-get-started -%}
+                        <a class="btn btn-lg dropdown-toggle" data-toggle="dropdown" href=""
+                            style="background: {{ page.main-color }};color:navajowhite !important"><span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="{{ page.pdf-get-started }}" target="_blank">Developer Guide (PDF)</a> </li>
+                        </ul>
                         {%- endif -%}
-                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
-                            <div>
-                                {%- if page.twitter-url -%}
-                                <div class="panel panel-default">
-                                    <a class="twitter-timeline" data-height="750" data-theme="light"
-                                        data-link-color="#ff6347"
-                                        href="{{ page.twitter-url }}?ref_src=twsrc%5Etfw">Tweets by shiocms</a>
-                                    <script async src="https://platform.twitter.com/widgets.js"
-                                        charset="utf-8"></script>
+                    </div>
+                    {%- endif -%}
+                    {%- if page.release -%}
+                    <a href="download" class="btn btn-default btn-lg"
+                        style="margin: 7px;color:#444;width:200px">Download {{ page.release }}</a>
+                    <a href="release-notes" class="btn btn-default btn-lg"
+                        style="margin: 7px;color:#444;width:200px">Release Notes</a>
+                    {%- endif -%}
+                </form>
+            </div>
+        </div>
+        {%- if page.youtube-playlist-id -%}
+        {%- include videos.html -%}
+        {%- endif -%}
+        <div class="row text-center" style="margin:0px;display: inherit;">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 col-centered" style="text-align: left;">
+                {{ page.content }}
+            </div>
+        </div>
+        <div class="row text-center" style="margin:0px;display: inherit;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
+                <div class="row text-center" style="margin:0px;display: inherit;">
+                    {% assign filtered_features = site.features | where:"solution", page.identifier %}
+                    {%- if filtered_features.size > 0 -%}
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 col-centered ">
+                        <div>
+
+                            {% for feature in filtered_features %}
+                            <div class="p-5 mb-4 bg-light rounded-3">
+                                <div class="container-fluid py-5">
+                                    <h1 class="display-5 fw-bold" style="color:{{ page.main-color }}">{{
+                                        feature.title }}</h1>
+                                    <p class="col-md-8 fs-4" style="color:black;line-height: 29px">{{
+                                        feature.content }}</p>
                                 </div>
-                                {%- endif -%}
-                                {%- if page.github -%}
-                                <div id="vigletfeedbox" class="panel panel-default">
-                                    <div class="row panel-heading" style="margin:0px">
-                                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"
-                                            style="width:calc(100% - 100px);padding:0px">
-                                            Track the progress of {{ page.short-name }} development
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"
-                                            style="width:50px;padding:0px;margin-left:10px">
-                                            {%- if page.github-ci-url -%}
-                                            <a href="{{ page.github-ci-url }}" target="_blank"><img
-                                                    src="{{ page.github-ci-url }}/badge.svg"></a>
-                                            {%- endif -%}
-                                        </div>
-                                    </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {%- endif -%}
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 col-centered">
+                        <div>
+                            {%- if page.twitter-url -%}
+                            <div class="card">
+                                <a class="twitter-timeline" data-height="750" data-theme="light"
+                                    data-link-color="#ff6347" href="{{ page.twitter-url }}?ref_src=twsrc%5Etfw">Tweets
+                                    by shiocms</a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                            {%- endif -%}
+                            {%- if page.github -%}
+                            <div id="vigletfeedbox" class="card mt-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Track the progress of {{ page.short-name }} development
+                                    </h5>
+                                    <h6 class="card-subtitle">
+                                        {%- if page.github-ci-url -%}
+                                        <a href="{{ page.github-ci-url }}" target="_blank"><img
+                                                src="{{ page.github-ci-url }}/badge.svg"></a>
+                                        {%- endif -%}
+                                    </h6>
+
                                     <div id="vigletfeed" class="panel-body"
                                         style="text-align: left; overflow-y: auto; max-height: 466px">
                                     </div>
                                 </div>
-                                {%- endif -%}
                             </div>
+                            {%- endif -%}
                         </div>
                     </div>
                 </div>

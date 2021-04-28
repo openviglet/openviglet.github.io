@@ -5,17 +5,18 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
 <div>
     {% assign solution = site.solutions | where:"identifier", page.identifier | first %}
     {%- include solution-menu.html -%}
-    <div class="container" style="padding: 0px">
-        <div class="row row-centered" style="margin:0px;background:{{ solution.main-color }};color: navajowhite">
-            <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered" style="padding:80px">
-                <div style="font-size:70px;text-align:center;line-height: 120%;">
-                    <b>Get {{ solution.short-name }}</b>
-                </div>
-                <div style="font-size:30px;text-align:center;line-height: 120%;">
-                    {{ solution.description }}
-                </div>
+    <div class="row text-center" style="display: inherit;margin:0px;background:{{ solution.main-color }};color: navajowhite">
+        <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered" style="padding:80px">
+            <div style="font-size:70px;text-align:center;line-height: 120%;">
+                <b>Get {{ solution.short-name }}</b>
+            </div>
+            <div style="font-size:30px;text-align:center;line-height: 120%;">
+                {{ solution.description }}
             </div>
         </div>
+    </div>
+    <div class="container">
+       
         <div class="row" style="margin:0px">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px">
                 <div style="font-size:50px;text-align:center;line-height: 120%">
@@ -34,9 +35,9 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
                 </div>
             </div>
         </div>
-        <div class="row row-centered" style="margin:0px;padding-bottom:50px">
+        <div class="row text-center" style="margin:0px;padding-bottom:50px;display: inherit;">
             <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered">
-                <div class="row row-centered" style="margin:0px;">
+                <div class="row text-center" style="margin:0px;">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-centered " style="margin-bottom:40px">
                         <h1>Requirements</h1>
                         <p style="font-size: 18px;">{{ solution.short-name }} was developed using Java. So you need the
@@ -65,8 +66,8 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
                 </div>
             </div>
         </div>
-        {%- if page.youtube-playlist-id -%}
-            {%- include videos.html -%}
+        {%- if solution.youtube-playlist-id -%}
+        {%- include videos.html -%}
         {%- endif -%}
     </div>
 </div>

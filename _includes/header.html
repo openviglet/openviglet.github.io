@@ -1,50 +1,50 @@
-<div>
-  <nav class="navbar navbar-default row  row-centered" role="navigation" style="background:#444;margin: 0px;">
-    <div class="container-fluid col-centered col-lg-9 col-md-9 col-sm-10 col-xs-10" style="padding-right:5px">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header pull-left">
-        <a class="navbar-brand" href="/"><img
-            style="margin: 5px; margin-top:10px; padding: 0px; width: 30px; height: 30px"
-            src="/static_files/img/viglet_logo_sm.png"> </a>
-        <a class="navbar-brand" href="/">
-          <div
-            style="margin-top: 17px; margin-left: 20px; color: white; font-size: 16px; line-height: 1; letter-spacing: .02em; font-weight: 700;">
-            Viglet.org
+<header class="p-3 bg-dark text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img style="margin: 5px; margin-top:10px; padding: 0px; width: 30px; height: 30px"
+          src="/static_files/img/viglet_logo_sm.png">
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 text-white">Viglet.org</a></li>
+      </ul>
+
+      <div class="text-end" style="width: 330px;">
+        {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+
+        <a href="https://www.paypal.com/donate?hosted_button_id=Q3LVEKDHLH9VY" data-toggle="tooltip" title="Donate"
+          target="_blank">
+          <div class="navbar-header pull-right" style="margin-top: 4px;margin-left: 10px;">
+            <div
+              style="background-color: #ffc63a;border-radius: 12px;padding: 1px; width: 92px; height: 24px;text-align: center;font-weight: bolder;color: black;">
+              Donate
+            </div>
+          </div>
+        </a>
+
+        {% for solution in stable_solutions %}
+        <a href="{{ solution.permalink }}" data-toggle="tooltip"
+          title="{{ solution.short_name }} - {{ solution.description }}">
+          <div class="navbar-header pull-right hidden-xs"
+            style="text-align: left;margin-right: 5px; margin-top: 0px; letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+            <div
+              style="background: {{ solution.main-color }};width: 30px;height: 30px;color: papayawhip;padding-top: 2px;padding-left: 2px;font-size: 14px;font-weight:  bolder;border-radius: 3px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19">
+              <div style="margin-top: 5px; margin-left: 2px;">
+                {{ solution.logo-acronym }}
+              </div>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+
+        <a href="/" data-toggle="tooltip" title="Pure Chemistry">
+          <div class="navbar-header pull-right hidden-xs"
+            style="margin-right: 15px;margin-top: 5px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+            <span>Pure Chemistry</span>
           </div>
         </a>
       </div>
-      {% assign stable_solutions = site.solutions | where:"status", "stable" %}
-
-      <a href="https://www.paypal.com/donate?hosted_button_id=Q3LVEKDHLH9VY" data-toggle="tooltip" title="Donate"
-        target="_blank">
-        <div class="navbar-header pull-right" style="margin-top: 14px;margin-left: 10px;">
-          <div style="background-color: #ffc63a;border-radius: 12px;padding: 1px; width: 92px; height: 24px;text-align: center;font-weight: bolder;color: black;">
-            Donate
-          </div>
-        </div>
-      </a>
-
-      {% for solution in stable_solutions %}
-      <a href="{{ solution.permalink }}" data-toggle="tooltip"
-        title="{{ solution.short_name }} - {{ solution.description }}">
-        <div class="navbar-header pull-right hidden-xs"
-          style="margin-right: 5px; margin-top: 10px; letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
-          <div
-            style="background: {{ solution.main-color }};width: 30px;height: 30px;color: papayawhip;padding-top: 2px;padding-left: 2px;font-size: 14px;font-weight:  bolder;border-radius: 3px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19">
-            <div style="margin-top: 5px;">
-              {{ solution.logo-acronym }}
-            </div>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
-
-      <a href="/" data-toggle="tooltip" title="Pure Chemistry">
-        <div class="navbar-header pull-right hidden-xs"
-          style="margin-right: 15px;margin-top: 15px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
-          <span>Pure Chemistry</span>
-        </div>
-      </a>
     </div>
-  </nav>
-</div>
+  </div>
+</header>
