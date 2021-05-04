@@ -3,7 +3,7 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
             <div class="navbar-header pull-left">
-                <a href="{{ solution.permalink }}">
+                <a href="{{ solution.permalink }}" style="text-decoration: none;">
                     <div class="pull-right hidden-xs"
                         style="line-height: 1.42857143;">
                         <div
@@ -24,26 +24,28 @@
         <div class="text-end">
             <div class="row" style="margin:0px">
                 {%- if solution.github -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
-                    <a title="GitHub" href="{{ solution.github }}" target="_blank"><i
-                            class="fa fa-github fa-2x fa-viglet" style="color:{{ solution.main-color }}"
-                            aria-hidden="true"></i></a>
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
+                    <a title="GitHub" href="{{ solution.github }}" target="_blank"><i class="bi bi-github" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
                 </div>
                 {%- endif -%}
                 {%- if solution.slack-url -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
-                    <a title="Community" href="{{ solution.slack-url }}" target="_blank"><i
-                            class="fa fa-comments fa-2x fa-viglet" style="color:{{ solution.main-color }}"
-                            aria-hidden="true"></i></a>
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
+                    <a title="Community" href="{{ solution.slack-url }}" target="_blank"><i class="bi bi-slack" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
                 </div>
                 {%- endif -%}
                 {%- if solution.twitter-url -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="padding:0px;margin-top:10px;width:40px">
-                    <a title="GitHub" href="{{ solution.twitter-url }}" target="_blank"><i
-                            class="fa fa-twitter fa-2x fa-viglet" style="color:{{ solution.main-color }}"
-                            aria-hidden="true"></i></a>
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
+                    <a title="Twitter" href="{{ solution.twitter-url }}" target="_blank"><i class="bi bi-twitter" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
                 </div>
                 {%- endif -%}
+                {%- if solution.facebook-url -%}
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
+                    <a title="Facebook" href="{{ solution.facebook-url }}" target="_blank"><i class="bi bi-facebook" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
+                </div>
+                {%- endif -%}
+                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
+                    <a title="YouTube" href="https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw" target="_blank"><i class="bi bi-youtube" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
       </div>

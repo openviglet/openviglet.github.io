@@ -23,6 +23,7 @@ download-url: https://github.com/openvecchio/vecchio/releases/download/v0.3.2/vi
 run-jar: viglet-vecchio.jar
 run-port: 2702
 social-image: https://avatars.githubusercontent.com/u/57564132?s=280&amp;v=4
+facebook-url: https://www.facebook.com/viglet
 ---
 
 ![](/static_files/img/vecchio_bridge.jpg){:style="width:100%;height:100%"}
