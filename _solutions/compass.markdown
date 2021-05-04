@@ -14,4 +14,5 @@ full-name: Viglet Compass DXP
 description: Your company in the right direction. CMS, AI, NLP and Chatbot in one place.
 twitter-url: https://twitter.com/CompassDXP
 social-image: https://avatars.githubusercontent.com/u/76269661?s=280&amp;v=4
+facebook-url: https://www.facebook.com/viglet
 ---
