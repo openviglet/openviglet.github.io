@@ -5,7 +5,7 @@ status: stable
 order: 1
 identifier: turing
 permalink: /turing/
-get-started: https://turing.readme.io/
+get-started: https://openturing.github.io
 github: https://github.com/openturing
 github-org: openturing
 release: 0.3.2
