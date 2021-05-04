@@ -6,28 +6,26 @@
           src="/static_files/img/viglet_logo_sm.png">
       </a>
 
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/" class="nav-link px-2 text-white d-none d-sm-block">Viglet.org</a></li>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-top: 4px;">
+        <li><a href="/" class="nav-link px-2 text-white d-none d-lg-block">Viglet.org</a></li>
       </ul>
 
-      <div class="text-end" style="width: 330px;">
-        {% assign stable_solutions = site.solutions | where:"status", "stable" %}
-
-        <a href="https://www.paypal.com/donate?hosted_button_id=Q3LVEKDHLH9VY" data-toggle="tooltip" title="Donate"
-          target="_blank">
-          <div class="navbar-header pull-right" style="margin-top: 4px;margin-left: 10px;">
-            <div
-              style="background-color: #ffc63a;border-radius: 12px;padding: 1px; width: 92px; height: 24px;text-align: center;font-weight: bolder;color: black;">
-              Donate
-            </div>
+      <div style="display: table;">
+        <a href="/" data-toggle="tooltip" title="Pure Chemistry" class="d-none d-lg-block"
+          style="display: table-cell;">
+          <div class="navbar-header pull-right hidden-xs"
+            style="margin-right: 15px;margin-top: 5px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+            <span>Pure Chemistry</span>
           </div>
         </a>
 
+        {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+
         {% for solution in stable_solutions %}
         <a href="{{ solution.permalink }}" data-toggle="tooltip"
-          title="{{ solution.short_name }} - {{ solution.description }}">
+          title="{{ solution.short_name }} - {{ solution.description }}" style="display: table-cell;">
           <div class="navbar-header pull-right hidden-xs"
-            style="text-align: left;margin-right: 5px; margin-top: 0px; letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+            style="text-align: left;margin-right: 3px;margin-left:3px; margin-top: 0px; letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
             <div
               style="background: {{ solution.main-color }};width: 30px;height: 30px;color: papayawhip;padding-top: 2px;padding-left: 2px;font-size: 14px;font-weight:  bolder;border-radius: 3px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19">
               <div style="margin-top: 5px; margin-left: 2px;">
@@ -38,12 +36,16 @@
         </a>
         {% endfor %}
 
-        <a href="/" data-toggle="tooltip" title="Pure Chemistry" class="d-none d-sm-block">
-          <div class="navbar-header pull-right hidden-xs"
-            style="margin-right: 15px;margin-top: 5px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
-            <span>Pure Chemistry</span>
+        <a href="https://www.paypal.com/donate?hosted_button_id=Q3LVEKDHLH9VY" data-toggle="tooltip" title="Donate"
+          target="_blank" class="d-none d-lg-block" style="display: table-cell;">
+          <div class="navbar-header pull-right" style="margin-top: 4px;margin-left: 10px;">
+            <div
+              style="background-color: #ffc63a;border-radius: 12px;padding: 1px; width: 92px; height: 24px;text-align: center;font-weight: bolder;color: black;">
+              Donate
+            </div>
           </div>
         </a>
+
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
 layout: solution
 title: Viglet Vecchio Auth
 status: stable
-order: 0
+order: 2
 identifier: vecchio
 permalink: /vecchio/
 get-started: https://openvecchio.github.io/vecchio/

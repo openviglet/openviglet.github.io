@@ -1,3 +1,8 @@
+@media only screen and (max-width: 991px) {
+    .vig-hide-md {
+        display: none !important;
+    }
+}
 #shlogo span {
     animation: glow 2s ease-in-out both infinite;
 }
@@ -187,171 +192,9 @@
 
 body {
     font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    line-height: 22px;
-    color: #444;
-    position: relative;
 }
 
-html {
-    font-size: 15px;
-}
-
-p {
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0 0 15px 0;
-    font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    color: #444;
-    text-transform: none;
-}
-
-.container {
-    width: 100%;
-}
-
-.navbar-brand {
-    padding: 0px;
-}
-
-.navbar-brand>img {
-    height: 100%;
-    padding: 15px;
-    width: auto;
-}
-
-.navbar-default .navbar-left>li:focus,
-.navbar-default .navbar-left>li:hover {
-    color: #333;
-    background-color: transparent;
-    border-bottom-color: #FF691F;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-}
-
-navbar-default .navbar-left>li:focus,
-.navbar-default .navbar-left>li {
-    color: #333;
-    background-color: transparent;
-    border-bottom-color: transparent;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-}
-
-.navbar-default .navbar-left>li.active {
-    border-bottom-color: #FF874B;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-}
-
-@media only screen and (min-width: 300px) {
-    .cover-welcome {
-        margin-top: 60px;
-        min-width: 100%;
-        min-height: 140px;
-        width: auto;
-        height: auto;
-        //  height: 100%; 
-        z-index: -100;
-        background-size: cover;
-        background-position: center top;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        overflow: hidden;
-        background: url('../img/banner/aiforeveryone.jpg') 50% 50% / cover no-repeat;
-    }
-    .banner-text {
-        margin-top: 10px;
-        margin-bottom: 0px;
-        text-align: center;
-        font-size: 16px;
-        line-height: 150%
-    }
-    .turing-text {
-        text-align: left;
-        font-size: 20px;
-        line-height: 150%
-    }
-}
-
-@media only screen and (min-width: 321px) {
-    .cover-welcome {
-        margin-top: 60px;
-        min-width: 100%;
-        min-height: 180px;
-        width: auto;
-        height: auto;
-        //  height: 100%; 
-        z-index: -100;
-        background-size: cover;
-        background-position: center top;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        overflow: hidden;
-        background: url('../img/banner/aiforeveryone.jpg') 50% 50% / cover no-repeat;
-    }
-    .banner-text {
-        margin-top: 10px;
-        margin-bottom: 0px;
-        text-align: center;
-        font-size: 20px;
-        line-height: 150%
-    }
-    .turing-text {
-        text-align: left;
-        font-size: 14px;
-        line-height: 150%
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    /* Styles */
-    .cover-welcome {
-        margin-top: 60px;
-        min-width: 100%;
-        min-height: 450px;
-        width: auto;
-        height: auto;
-        //  height: 100%; 
-        z-index: -100;
-        background-size: cover;
-        background-position: center top;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        overflow: hidden;
-        background: url('../img/banner/aiforeveryone.jpg') 50% 50% / cover no-repeat;
-    }
-    .banner-text {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 25px;
-        line-height: 150%
-    }
-    .turing-text {
-        text-align: left;
-        font-size: 16px;
-        line-height: 150%
-    }
-}
-/**** Phone and Tablet layout ****/
-
-@media (max-width: 839px) {
+@media (max-width: 991px) {
 .viglet-more-videos-label {
     text-align: right;
 }  

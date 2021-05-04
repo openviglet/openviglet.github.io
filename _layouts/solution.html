@@ -78,7 +78,7 @@ layout: default
                 <div class="row text-center" style="margin:0px;display: inherit;width: 100%;">
                     {% assign filtered_features = site.features | where:"solution", page.identifier %}
                     {%- if filtered_features.size > 0 -%}
-                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 col-centered ">
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-centered ">
                         <div>
 
                             {% for feature in filtered_features %}
@@ -94,7 +94,7 @@ layout: default
                         </div>
                     </div>
                     {%- endif -%}
-                    <div class="col-lg-5 col-md-5 col-centered ">
+                    <div class="col-lg-5 col-centered vig-hide-md">
                         <div>
                             {%- if page.twitter-url -%}
                             <div class="card">
