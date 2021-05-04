@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Viglet Vecchio AI
+title: Viglet Vecchio Auth
 status: stable
 order: 0
 identifier: vecchio
@@ -27,14 +27,6 @@ social-image: https://avatars.githubusercontent.com/u/57564132?s=280&amp;v=4
 
 ![](/static_files/img/vecchio_bridge.jpg){:style="width:100%;height:100%"}
 _Ponte Vecchio (Old Bridge) is famous for having many stores along it._
-
-### Features
-
-- Significantly lowers integration costs, decreases total cost of ownership, and reduces deployment risks
-- Connects mobile devices to existing enterprise systems
-- Provides a lightweight API gateway for securing and managing APIs
-- Offers rich integration with many identity and access management platforms
-- Helps streamline regulatory compliance through authentication, authorization, and audit capabilities
 
 ### OAuth2
 
