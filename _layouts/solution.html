@@ -30,7 +30,7 @@ layout: default
                 </div>
                 <form class="form-inline text-center" style="margin:0px;margin-bottom:70px">
                     {%- if page.pdf-get-started -%}
-                    <div class="btn-group" style="margin-bottom: 7px;">
+                    <div class="btn-group">
                         <a href="{{ page.get-started }}" target="_blank" class="btn btn-lg"
                         style="width:168px;background: {{ page.main-color }};color:navajowhite !important">Get
                         Started</a>
@@ -43,16 +43,13 @@ layout: default
                           </ul>
                     </div>
                     {%- else -%}
-                    {%- if page.get-started -%}
-                    <div class="btn-group">
-                        <a href="{{ page.get-started }}" target="_blank" class="btn btn-lg"
-                        style="margin: 7px;width:200px;background: {{ page.main-color }};color:navajowhite !important">Get
-                        Started</a>
-                    </div>
-                    {%- endif -%}
-                    {%- endif -%}
-                    {%- if page.pdf-get-started  -%}
-                    
+                        {%- if page.get-started -%}
+                        <div class="btn-group">
+                            <a href="{{ page.get-started }}" target="_blank" class="btn btn-lg"
+                            style="margin: 7px;width:200px;background: {{ page.main-color }};color:navajowhite !important">Get
+                            Started</a>
+                        </div>
+                        {%- endif -%}
                     {%- endif -%}
                     {%- if page.release -%}
                     <a href="download" class="btn btn-light btn-lg"
