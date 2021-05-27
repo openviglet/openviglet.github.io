@@ -40,6 +40,8 @@ collections:
     sort_by: order
   features:
     output: false
+  modules:
+    output: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
