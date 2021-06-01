@@ -171,7 +171,9 @@ layout: default
             <h2 class="pb-2 border-bottom">Integration</h2>
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 {% for module in filtered_modules %}
+                {%- if  module.github-url -%}
                 <a href="{{ module.github-url }}" target="_blank" style="text-decoration: none;color: inherit;">
+                {%- endif -%}
                     <div class="col d-flex align-items-start">
                         <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
                             <svg class="bi" width="1em" height="1em">
@@ -183,7 +185,9 @@ layout: default
                             <p>{{ module.description }}</p>
                         </div>
                     </div>
+                {%- if  module.github-url -%}
                 </a>
+                {%- endif -%}
                 {% endfor %}
             </div>
         </div>
