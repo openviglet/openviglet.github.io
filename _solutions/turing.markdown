@@ -8,7 +8,7 @@ permalink: /turing/
 get-started: https://openturing.github.io
 github: https://github.com/openturing
 github-org: openturing
-release: 0.3.2
+release: 0.3.3
 main-color: royalblue
 logo-acronym: Tu
 logo-section: AI
@@ -18,8 +18,8 @@ description: Semantic Navigation, Chatbot using Search Engine and Many NLP Vendo
 github-ci-url: https://github.com/openturing/turing/actions/workflows/build.yml
 twitter-url: https://twitter.com/VigletTuring
 download-message: Download Turing AI and add more value to your content.
-download-size: 159 MB
-download-url: https://github.com/openturing/turing/releases/download/v0.3.2/viglet-turing.jar
+download-size: 384 MB
+download-url: https://github.com/openturing/turing/releases/download/v0.3.3/viglet-turing.jar
 run-jar: viglet-turing.jar
 run-port: 2700
 social-image: https://avatars.githubusercontent.com/u/44909290?s=280&amp;v=4

@@ -1,5 +1,12 @@
 
 [
+	{
+		"name": ""
+		, "notes": ["[New] Chatbot.", 
+			"[New] PostgreSQL JDBC."]
+		, "pub_date": "2021-05-31T12:00:00Z"
+		, "version": "0.3.3"
+	},
 {
     "name": ""
     , "notes": ["[New] Unit Test.", 

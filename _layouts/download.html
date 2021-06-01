@@ -2,10 +2,47 @@
 layout: default
 social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
 ---
+<style>
+    .feature-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        color: #fff;
+        border-radius: .75rem;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .icon-square {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        border-radius: .75rem;
+    }
+</style>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="toggles2" viewBox="0 0 16 16">
+        <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z" />
+        <path
+            d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z" />
+        <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z" />
+    </symbol>
+</svg>
 <div>
     {% assign solution = site.solutions | where:"identifier", page.identifier | first %}
     {%- include solution-menu.html -%}
-    <div class="row text-center" style="display: inherit;margin:0px;background:{{ solution.main-color }};color: navajowhite">
+    <div class="row text-center"
+        style="display: inherit;margin:0px;background:{{ solution.main-color }};color: navajowhite">
         <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered" style="padding:80px">
             <div style="font-size:70px;text-align:center;line-height: 120%;">
                 <b>Get {{ solution.short-name }}</b>
@@ -16,7 +53,7 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
         </div>
     </div>
     <div class="container">
-       
+
         <div class="row" style="margin:0px">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px">
                 <div style="font-size:50px;text-align:center;line-height: 120%">
@@ -59,13 +96,39 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
                                     <samp style="font-size: 18px;">java -jar {{ solution.run-jar }}</samp>
                                 </div>
                                 <li style="margin-top:  10px;margin-bottom: 10px;">Point your browser to
-                                    http://localhost:{{ solution.run-port }}. {%- if solution.app-login -%}&nbsp;Use the login/password: {{ solution.app-login }}/{{ solution.app-password }} {%- endif -%}</li>
+                                    http://localhost:{{ solution.run-port }}. {%- if solution.app-login -%}&nbsp;Use the
+                                    login/password: {{ solution.app-login }}/{{ solution.app-password }} {%- endif -%}
+                                </li>
                             </ol>
                         </blockquote>
                     </div>
                 </div>
             </div>
         </div>
+        {% assign filtered_modules = site.modules | where:"solution", page.identifier | where:"download", "true" %}
+        {%- if filtered_modules.size > 0 -%}
+
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Integration</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                {% for module in filtered_modules %}
+                <a href="{{ module.download-url }}" target="_blank" style="text-decoration: none;color: inherit;">
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                            <svg class="bi" width="1em" height="1em">
+                                <use xlink:href="#toggles2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>{{ module.title }}</h2>
+                            <p>{{ module.description }}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {%- endif -%}
         {%- if solution.youtube-playlist-id -%}
         {%- include videos.html -%}
         {%- endif -%}
