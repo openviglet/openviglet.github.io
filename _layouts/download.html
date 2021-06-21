@@ -56,12 +56,21 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
 
         <div class="row" style="margin:0px">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:50px">
+                {%- if installation-steps -%}
                 <div style="font-size:50px;text-align:center;line-height: 120%">
                     <b>Only 3 steps to run for free</b>
                 </div>
                 <div style="font-size:30px;text-align:center;line-height: 120%;color:gray;padding-bottom:30px">
                     {{ solution.download-message }}
                 </div>
+                {%- else -%}
+                <div style="font-size:50px;text-align:center;line-height: 120%">
+                    <b>Some steps to run for free</b>
+                </div>
+                <div style="font-size:30px;text-align:center;line-height: 120%;color:gray;padding-bottom:30px">
+                    {{ solution.download-message }}
+                </div>        
+                {%- endif -%}
                 <div style="text-align: center;margin-bottom: 20px;">
                     <a href="{{ solution.download-url }}" class="btn btn-viglet btn-lg"
                         style="background: {{ solution.main-color }};margin: 7px;color:navajowhite !important">Download
@@ -76,13 +85,16 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
             <div class="col-lg-9 col-md-9 col-sm-10 col-xs-11 col-centered">
                 <div class="row text-center" style="margin:0px;">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-centered " style="margin-bottom:40px">
+                        {%- if installation-steps -%}
                         <h1>Requirements</h1>
                         <p style="font-size: 18px;">{{ solution.short-name }} was developed using Java. So you need the
                             Java 14. It can run on both Linux and Windows.</p>
+                        {%- endif -%}
                         <h1 style="margin-top:40px">Documentation</h1>
                         <p style="font-size: 18px;">Wondering how {{ solution.short-name }} works? Read documentation at
                             <a href="{{ solution.get-started }}" target="_blank">{{ solution.get-started }}</a>
                     </div>
+                    {%- if installation-steps -%}
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-centered ">
                         <h1>Installation</h1>
                         <p style="font-size: 18px;">You need only 5 minutes to install {{ solution.short-name }}, so run
@@ -101,6 +113,7 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
                             </ol>
                         </blockquote>
                     </div>
+                    {%- endif -%}
                 </div>
             </div>
         </div>

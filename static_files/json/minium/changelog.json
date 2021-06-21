@@ -1,0 +1,39 @@
+
+[
+{
+    "name": ""
+    , "notes": [ 
+		"[New] Add remote profile to Minium Developer integrate with Minium Manager."]
+    , "pub_date": "2021-03-23T12:00:00Z"
+    , "version": "2.6.0"
+},
+{
+    "name": ""
+    , "notes": [ 
+		"[New] New type of Minium Project: Monitoring. Monitoring is executed with high frequency (every 5, 10, 20 minutes), and can give us a report about the availability of a certain page and performance metrics, with the objective to check that the page are working as expected."]
+    , "pub_date": "2019-12-03T12:00:00Z"
+    , "version": "2.0.0"
+},
+{
+    "name": ""
+    , "notes": [ 
+		"[Improved] Fixed chrome driver download."]
+    , "pub_date": "2019-12-03T12:00:00Z"
+    , "version": "1.9.8"
+},
+{
+    "name": ""
+    , "notes": [ 
+		"[New] Support download of minium project dependencies."]
+    , "pub_date": "2018-10-18T12:00:00Z"
+    , "version": "1.9.5"
+},
+{
+    "name": ""
+    , "notes": [ 
+		"[Improved] Fixed IE driver download.",
+		"[Improved] Dropped support for PhantomJS",
+		"[Improved] Minor fixes."]
+    , "pub_date": "2018-03-20T12:00:00Z"
+    , "version": "1.9.1"
+}]

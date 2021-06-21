@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Fuse
+title: Fuse Management Central
 status: stable
 order: 2
 identifier: fuse
@@ -8,7 +8,7 @@ permalink: /fuse/
 main-color: fuchsia
 logo-acronym: Fu
 logo-section: APM
-short-name: Fuse
+short-name: Fuse Management Central
 full-name: Fuse Management Central
 description: The most simplified and intuitive OpenText Content Suite/Extended ECM management solution.
 twitter-url: https://twitter.com/openviglet
