@@ -1,7 +1,7 @@
 ---
 layout: solution
 title: Fuse
-status: unstable
+status: stable
 order: 2
 identifier: fuse
 permalink: /fuse/

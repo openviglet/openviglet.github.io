@@ -1,8 +1,8 @@
 ---
 layout: solution
 title: Minium
-status: unstable
-order: 5
+status: stable
+order: 4
 identifier: minium
 permalink: /minium/
 main-color: darkorange
