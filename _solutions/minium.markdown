@@ -2,7 +2,7 @@
 layout: solution
 title: Minium TAP
 status: stable
-order: 4
+order: 2
 identifier: minium
 permalink: /minium/
 main-color: darkorange

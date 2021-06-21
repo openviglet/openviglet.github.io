@@ -2,7 +2,7 @@
 layout: solution
 title: Viglet Turing AI
 status: stable
-order: 1
+order: 4
 identifier: turing
 permalink: /turing/
 get-started: https://openturing.github.io

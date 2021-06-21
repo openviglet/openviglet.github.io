@@ -2,7 +2,7 @@
 layout: solution
 title: Fuse Management Central
 status: stable
-order: 2
+order: 1
 identifier: fuse
 permalink: /fuse/
 main-color: fuchsia

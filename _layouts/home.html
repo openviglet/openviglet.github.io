@@ -22,40 +22,44 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
     </div>
 </a>
 <div class="d-none d-md-block">
-    <div class="row text-center" style="margin: 0px;margin-top:75px;display: inherit;">
+    {% assign row_type = false %}
+    {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+    {% for solution in stable_solutions %}
+
+    {%- if row_type -%}
+    {% assign row_type = false %}
+    {%- else -%}
+    {% assign row_type = true %}
+    {%- endif -%}
+
+    {%- if row_type -%}
+    <div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
         <div class="col-lg-7 col-md-6 col-centered" style="text-align:right">
-            <h2><a target="_blank" href="/shio" style="color:#444;text-decoration: none;font-weight: bolder;">Shio
-                    CMS</a></h2>
-            <h3>Model Content, Use GraphQL and Create Site<br> using Javascript with Native Cache and Search.</h3>
+            <h2><a target="_blank" href="{{ solution.permalink }}"
+                    style="color:#444;text-decoration: none;font-weight: bolder;">{{ solution.short-name }}</a></h2>
+            <h3>{{ solution.description }}</h3>
 
         </div>
-        <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm" style="text-align:right">
-            <a target="_blank" href="/shio"><img src="/static_files/img/projects/shiohara2_1024.png" alt="Shio CMS"
-                    width="180" height="180"></a>
+        <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm" style="text-align:right;max-width: 245px;">
+            <a target="_blank" href="{{ solution.permalink }}">
+                {%- include solution-home-logo.html -%}
+            </a>
         </div>
     </div>
-    <div class="row text-center" style="margin: 0px;display: inherit;">
-        <div class="col-lg-2 col-md-3  col-centered hidden-xs hidden-sm">
-            <a target="_blank" href="/turing"><img src="/static_files/img/projects/Turing2_1024.png" alt="Turing AI"
-                    width="180" height="180"></a>
+    {%- else -%}
+    <div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
+        <div class="col-lg-2 col-md-3  col-centered hidden-xs hidden-sm;" style="max-width: 205px;">
+            <a target="_blank" href="{{ solution.permalink }}">
+                {%- include solution-home-logo.html -%}
+            </a>
         </div>
-        <div class="col-lg-7 col-md-6 col-centered">
-            <h2><a target="_blank" href="/turing" style="color:#444;text-decoration: none;font-weight: bolder;">Turing
-                    AI</a></h2>
-            <h3>Semantic Navigation, Chatbot using Search Engine and Many NLP Vendors.</h3>
-
-        </div>
-    </div>
-    <div class="row text-center" style="margin: 0px;display: inherit;">
-        <div class="col-lg-7 col-md-6 col-centered" style="text-align:right">
-            <h2><a target="_blank" href="/vecchio" style="color:#444;text-decoration: none;font-weight: bolder;">Vecchio
-                    Auth</a></h2>
-            <h3>Allows to create authentication and authorization layers to access API with proactive monitoring.</h3>
-        </div>
-        <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm" style="text-align:right">
-            <a target="_blank" href="/vecchio"><img src="/static_files/img/projects/vecchio-logo.png" alt="Vecchio Auth"
-                    width="180" height="180"></a>
+        <div class="col-lg-7 col-md-6 col-centered" style="padding-left:40px">
+            <h2><a target="_blank" href="{{ solution.permalink }}"
+                    style="color:#444;text-decoration: none;font-weight: bolder;">{{ solution.short-name }}</a></h2>
+            <h3>{{ solution.description }}</h3>
         </div>
     </div>
+    {%- endif -%}
+    {% endfor %}
 </div>
 {%- include contact_static.html -%}
