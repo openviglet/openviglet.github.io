@@ -15,4 +15,5 @@ description: Delivering Kubernetes-as-a-Service.
 twitter-url: https://twitter.com/openviglet
 social-image: https://avatars.githubusercontent.com/u/46730276?s=280&amp;v=4
 facebook-url: https://www.facebook.com/viglet
+file-type: .jar
 ---

@@ -15,4 +15,5 @@ twitter-url: https://twitter.com/openviglet
 social-image: https://viglet.org/static_files/img/fuse_logo.png
 facebook-url: https://www.facebook.com/viglet
 youtube-playlist-id: PLucp-3sa10A5kjvO_DIlAqz5wIqVQWH30
+file-type: .jar
 ---
