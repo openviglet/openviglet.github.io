@@ -1,7 +1,7 @@
 ---
 layout: solution
 title: Viglet Vecchio Auth
-status: stable
+status: unstable
 order: 5
 identifier: vecchio
 permalink: /vecchio/
