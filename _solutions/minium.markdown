@@ -5,6 +5,9 @@ status: stable
 order: 2
 identifier: minium
 permalink: /minium/
+get-started: https://minium.vilt.io/docs/
+github: https://github.com/viltgroup/minium-developer
+github-org: viltgroup
 main-color: darkorange
 logo-acronym: Mi
 logo-section: TAP
@@ -15,7 +18,6 @@ twitter-url: https://twitter.com/openviglet
 social-image: https://viglet.org/static_files/img/minium_logo.png
 facebook-url: https://www.facebook.com/viglet
 youtube-playlist-id: PLtYR_mxVztvMZuYfgjRe5OAl2WL_mb2N_
-get-started: https://minium.vilt.io/docs/
 download-message: Download Minium and test your sites.
 download-size: 110 MB
 download-url: https://github.com/viltgroup/minium-developer/releases/download/minium-developer-2.6.0/minium-developer-2.6.0-linux.tar.gz
