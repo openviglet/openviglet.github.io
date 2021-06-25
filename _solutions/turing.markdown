@@ -5,7 +5,7 @@ status: stable
 order: 4
 identifier: turing
 permalink: /turing/
-get-started: https://openturing.github.io
+get-started: https://docs.viglet.com/turing/
 github: https://github.com/openturing
 github-org: openturing
 release: 0.3.4
