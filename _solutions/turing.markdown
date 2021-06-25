@@ -25,4 +25,5 @@ run-port: 2700
 social-image: https://avatars.githubusercontent.com/u/44909290?s=280&amp;v=4
 facebook-url: https://www.facebook.com/viglet
 file-type: .jar
+youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
 ---

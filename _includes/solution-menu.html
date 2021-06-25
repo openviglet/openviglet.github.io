@@ -43,9 +43,11 @@
                     <a title="Facebook" href="{{ solution.facebook-url }}" target="_blank"><i class="bi bi-facebook" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
                 </div>
                 {%- endif -%}
+                {%- if solution.facebook-url -%}
                 <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-                    <a title="YouTube" href="https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw" target="_blank"><i class="bi bi-youtube" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
+                    <a title="YouTube" href="{{ solution.youtube-channel }}" target="_blank"><i class="bi bi-youtube" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
                 </div>
+                {%- endif -%}
                 <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
                     <a title="Contact" href="#contactForm" ><i class="bi bi-chat" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
                 </div>

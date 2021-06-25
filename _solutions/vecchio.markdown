@@ -25,6 +25,7 @@ run-port: 2702
 social-image: https://avatars.githubusercontent.com/u/57564132?s=280&amp;v=4
 facebook-url: https://www.facebook.com/viglet
 file-type: .jar
+youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
 ---
 ![](/static_files/img/vecchio_bridge.jpg){:style="width:100%;height:100%"}
 _Ponte Vecchio (Old Bridge) is famous for having many stores along it._

@@ -18,6 +18,7 @@ description: Model Content, Use GraphQL and Create Site using Javascript with Na
 github-ci-url: https://github.com/ShioCMS/shio/actions/workflows/build.yml
 twitter-url: https://twitter.com/shiocms
 slack-url: https://join.slack.com/t/shiocms/shared_invite/zt-pm6w20zq-ywfhQj0zf_mejan0_xXqJw
+youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
 youtube-playlist-id: PLucp-3sa10A40BeGVAvLChPwONTfQ0nmY
 download-message: Download Shio CMS and create your site.
 download-size: 155 MB

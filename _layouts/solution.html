@@ -113,7 +113,7 @@ layout: default
 
         <div class="row text-center" style="margin:0px;display: inherit">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
-                <div class="row text-center" style="margin:0px;display: inherit;width: 100%;">
+                <div class="row text-center" style="margin:0px; display: flex;;width: 100%;">
                     {% assign filtered_features = site.features | where:"solution", page.identifier %}
                     {%- if filtered_features.size > 0 -%}
                     <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-centered ">
@@ -131,36 +131,39 @@ layout: default
                         </div>
                     </div>
                     {%- endif -%}
-                    <div class="col-lg-5 col-centered vig-hide-md">
-                        <div>
-                            {%- if page.twitter-url -%}
-                            <div class="card">
-                                <a class="twitter-timeline" data-height="750" data-theme="light"
-                                    data-link-color="#ff6347" href="{{ page.twitter-url }}?ref_src=twsrc%5Etfw">Tweets
-                                    by shiocms</a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            </div>
-                            {%- endif -%}
+                    <div class="col-lg-5 col-centered vig-hide-md" >
+                        {%- if page.twitter-url -%}
+                            {% assign twitter-height = "calc( 100% - 24px )" %}
                             {%- if page.github -%}
-                            <div id="vigletfeedbox" class="card mt-2">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        Track the progress of {{ page.short-name }} development
-                                    </h5>
-                                    <h6 class="card-subtitle">
-                                        {%- if page.github-ci-url -%}
-                                        <a href="{{ page.github-ci-url }}" target="_blank"><img
-                                                src="{{ page.github-ci-url }}/badge.svg"></a>
-                                        {%- endif -%}
-                                    </h6>
+                                {% assign twitter-height = "50%" %}
+                            {%- endif -%}
+                        <div id="twittercard" class="card abc" style="height: {{ twitter-height }};">
+                            <a  class="twitter-timeline" data-height="100%" data-theme="light" data-link-color="#ff6347"
+                                href="{{ page.twitter-url }}?ref_src=twsrc%5Etfw">Tweets
+                                by shiocms</a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                        {%- endif -%}
+                        {%- if page.github -%}
+                        <div id="vigletfeedbox" class="card mt-4" style="height: calc( 50% - 47px );"">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Track the progress of {{ page.short-name }} development
+                                </h5>
+                                <h6 class="card-subtitle">
+                                    {%- if page.github-ci-url -%}
+                                    <a href="{{ page.github-ci-url }}" target="_blank"><img
+                                            src="{{ page.github-ci-url }}/badge.svg"></a>
+                                    {%- endif -%}
+                                </h6>
 
-                                    <div id="vigletfeed" class="panel-body"
-                                        style="text-align: left; overflow-y: auto; max-height: 466px">
-                                    </div>
+                                <div id="vigletfeed" class="panel-body"
+                                    style="text-align: left; overflow-y: auto; max-height: 466px">
                                 </div>
                             </div>
-                            {%- endif -%}
                         </div>
+                        {%- endif -%}
+
                     </div>
                 </div>
             </div>
@@ -171,9 +174,9 @@ layout: default
             <h2 class="pb-2 border-bottom">Integration</h2>
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 {% for module in filtered_modules %}
-                {%- if  module.github-url -%}
+                {%- if module.github-url -%}
                 <a href="{{ module.github-url }}" target="_blank" style="text-decoration: none;color: inherit;">
-                {%- endif -%}
+                    {%- endif -%}
                     <div class="col d-flex align-items-start">
                         <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
                             <svg class="bi" width="1em" height="1em">
@@ -185,7 +188,7 @@ layout: default
                             <p>{{ module.description }}</p>
                         </div>
                     </div>
-                {%- if  module.github-url -%}
+                    {%- if module.github-url -%}
                 </a>
                 {%- endif -%}
                 {% endfor %}

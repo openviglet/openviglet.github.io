@@ -18,6 +18,7 @@ twitter-url: https://twitter.com/openviglet
 social-image: https://viglet.org/static_files/img/minium_logo.png
 facebook-url: https://www.facebook.com/viglet
 youtube-playlist-id: PLtYR_mxVztvMZuYfgjRe5OAl2WL_mb2N_
+youtube-channel: https://www.youtube.com/channel/UCmsXcLcJlDH_E7LavJ7xoyw
 download-message: Download Minium and test your sites.
 download-size: 110 MB
 download-url: https://github.com/viltgroup/minium-developer/releases/download/minium-developer-2.6.0/minium-developer-2.6.0-linux.tar.gz

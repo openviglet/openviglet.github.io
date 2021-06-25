@@ -16,4 +16,5 @@ twitter-url: https://twitter.com/CompassDXP
 social-image: https://avatars.githubusercontent.com/u/76269661?s=280&amp;v=4
 facebook-url: https://www.facebook.com/viglet
 file-type: .jar
+youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
 ---
