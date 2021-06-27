@@ -16,7 +16,7 @@ logo-section: Auth
 short-name: Vecchio Auth
 full-name: Viglet Vecchio Auth
 description: Allows to create authentication and authorization layers to access API with proactive monitoring.
-twitter-url: https://twitter.com/openviglet
+twitter-url: https://twitter.com/VigletTweet
 download-message: Download Vecchio Auth and have more security in your environment.
 download-size: 77.7 MB
 download-url: https://github.com/openvecchio/vecchio/releases/download/v0.3.2/viglet-vecchio.jar

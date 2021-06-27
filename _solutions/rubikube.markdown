@@ -12,7 +12,7 @@ logo-section: Container
 short-name: Rubikube Container
 full-name: Viglet Rubikube Container
 description: Delivering Kubernetes-as-a-Service.
-twitter-url: https://twitter.com/openviglet
+twitter-url: https://twitter.com/VigletTweet
 social-image: https://avatars.githubusercontent.com/u/46730276?s=280&amp;v=4
 facebook-url: https://www.facebook.com/viglet
 file-type: .jar

@@ -12,7 +12,7 @@ logo-section: Money
 short-name: Gauss Money
 full-name: Viglet Gauss Money
 description: Your money in an uncomplicated way.
-twitter-url: https://twitter.com/openviglet
+twitter-url: https://twitter.com/VigletTweet
 social-image: https://avatars.githubusercontent.com/u/82658301?s=400&amp;v=4
 facebook-url: https://www.facebook.com/viglet
 file-type: .jar
