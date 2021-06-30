@@ -1,6 +1,7 @@
 ---
 layout: solution
 title: Viglet Compass DXP
+status: unstable
 identifier: compass
 order: 3
 permalink: /compass/

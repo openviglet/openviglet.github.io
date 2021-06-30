@@ -1,10 +1,64 @@
-<div sh-region="VIGLET_FOOTER_REGION" class="sh-region" id="2cb6d226-981d-408c-876c-b311c5df35f0">
-    <div id="footer">
-        <div class="container">
-            <p style="text-align: center; padding-top: 10px;width: 100%;">©
-                <script> var d = new Date();
-                    document.write(d.getFullYear());</script> Viglet
-            </p>
+<div class="container py-3">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-3 col-md">
+                <img class="mb-2" src="/static_files/img/viglet_logo_sm.png" alt="" style="width:30px; height:30px">
+                <span style="font-size: larger;font-weight: bolder;margin-left: 3px;">Viglet.</span>
+                <small class="d-block mb-3 text-muted">© 2017– {{ 'now' | date: "%Y" }}</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Solutions</h5>
+                <ul class="list-unstyled text-small">
+
+                    {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+                    {% for solution in stable_solutions %}
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="{{ solution.permalink }}">
+                            {%- include solution-footer-logo.html -%}
+                            <span style="margin-left: 5px;">{{ solution.short-name }}</span>
+                        </a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-6 col-md">
+                <h5>Incubator</h5>
+                <ul class="list-unstyled text-small">
+
+                    {% assign unstable_solutions = site.solutions | where:"status", "unstable" %}
+                    {% for solution in unstable_solutions %}
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="{{ solution.permalink }}">
+                            {%- include solution-footer-logo.html -%}
+                            <span style="margin-left: 5px;">{{ solution.short-name }}</span>
+                        </a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none"
+                            href="https://docs.viglet.com">Documentation</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="/partner">Became a Partner</a>
+                    </li>
+                    <li><div class="row" style="margin:0px">
+                        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
+                            <a title="LinkedIn" href="https://linkedin.com/company/viglet" target="_blank"><i class="bi bi-linkedin" style="color:#6c757d;font-size: 25px;" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
+                            <a title="YouTube" href="https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw" target="_blank"><i class="bi bi-youtube" style="color:#6c757d;font-size: 25px;" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
+                            <a title="Twitter" href="https://twitter.com/VigletTweet" target="_blank"><i class="bi bi-twitter" style="color:#6c757d;font-size: 25px;" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
+                            <a title="Facebook" href="https://facebook.com/viglet" target="_blank"><i class="bi bi-facebook" style="color:#6c757d;font-size: 25px;" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
+                            <a title="GitHub" href="https://github.com/openviglet" target="_blank"><i class="bi bi-github" style="color:#6c757d;font-size: 25px;" aria-hidden="true"></i></a>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </footer>
 </div>

@@ -1,6 +1,7 @@
 ---
 layout: solution
 title: Viglet Rubikube Container
+status: unstable
 identifier: rubikube
 order: 6
 permalink: /rubikube/

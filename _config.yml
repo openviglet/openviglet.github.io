@@ -37,7 +37,6 @@ plugins:
 collections:
   solutions:
     output: true
-    sort_by: order
   features:
     output: false
   modules:

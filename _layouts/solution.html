@@ -110,12 +110,13 @@ layout: default
                 {{ page.content }}
             </div>
         </div>
-
+        {% assign filtered_features = site.features | where:"solution", page.identifier %}
+        {%- if filtered_features.size > 0 -%}
         <div class="row text-center" style="margin:0px;display: inherit">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
                 <div class="row text-center" style="margin:0px; display: flex;;width: 100%;">
-                    {% assign filtered_features = site.features | where:"solution", page.identifier %}
-                    {%- if filtered_features.size > 0 -%}
+                    
+                    
                     <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-centered ">
                         <div>
                             {% for feature in filtered_features %}
@@ -130,7 +131,7 @@ layout: default
                             {% endfor %}
                         </div>
                     </div>
-                    {%- endif -%}
+                   
                     <div class="col-lg-5 col-centered vig-hide-md" >
                         {%- if page.twitter-url -%}
                             {% assign twitter-height = "calc( 100% - 24px )" %}
@@ -168,6 +169,7 @@ layout: default
                 </div>
             </div>
         </div>
+        {%- endif -%}
         {% assign filtered_modules = site.modules | where:"solution", page.identifier %}
         {%- if filtered_modules.size > 0 -%}
         <div class="container px-4 py-5">

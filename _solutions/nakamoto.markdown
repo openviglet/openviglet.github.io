@@ -1,6 +1,7 @@
 ---
 layout: solution
 title:  Viglet Nakamoto Ledger
+status: unstable
 identifier: nakamoto
 order: 5
 permalink: /nakamoto/
