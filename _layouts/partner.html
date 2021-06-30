@@ -22,19 +22,18 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
 <section id="contact" class="container px-4 py-5">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="pb-2 border-bottom">Contact</h2>
-            <hr class="star-primary">
+            <h2 class="pb-2 border-bottom" style="margin-bottom: 18px;">Contact</h2>
         </div>
     </div>
     <form action="https://formspree.io/f/moqyjjka" method="POST" name="sentMessage" id="contactForm"
-        class="form-floating" novalidate>
+        class="form-floating" >
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" name="name" id="name" required
+            <input type="text" class="form-control" name="name" id="name" required
                 data-validation-required-message="Please enter your name." placeholder="name@example.com">
             <label for="floatingInput">Name</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" name="_replyto" class="form-control" id="email" required
+            <input type="email" name="_replyto" class="form-control" id="email" required
                 data-validation-required-message="Please enter your email address." placeholder="Email Address">
             <label for="email">Email Address</label>
         </div>
@@ -51,7 +50,7 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
         <div class="row">
             <div class="form-group col-xs-12 d-grid gap-2" style="text-align: center;">
                     <button class="btn btn-lg"
-                    style="background:#ffc63a;color: black;">Send</button>
+                    style="background:#ffc63a;color: black;" type="submit">Send</button>
                 
             </div>
         </div>
