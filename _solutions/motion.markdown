@@ -1,6 +1,6 @@
 ---
 layout: solution
-title: Motion
+title: Motion Migration Tool
 status: stable
 order: 3
 identifier: motion
@@ -9,7 +9,7 @@ main-color: deepskyblue
 logo-acronym: Mo
 logo-section: Migration
 short-name: Motion Migration
-full-name: Motion Migration
+full-name: Motion Migration Tool
 description: Migrate content between OpenText WEM or Teamsite environments with a level of detail never seen before.
 twitter-url: https://twitter.com/VigletTweet
 youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
