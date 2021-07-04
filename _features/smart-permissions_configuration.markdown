@@ -1,5 +1,5 @@
 ---
 title: Configuration
-solution: smart-permission
+solution: smart-permissions
 ---
 Fully customizable, providing flexibility to support different scenarios.

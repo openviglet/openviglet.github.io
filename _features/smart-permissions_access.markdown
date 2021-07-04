@@ -1,5 +1,5 @@
 ---
 title: Access Request
-solution: smart-permission
+solution: smart-permissions
 ---
 Users can request access to content.
