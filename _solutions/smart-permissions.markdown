@@ -4,7 +4,7 @@ title: Smart Permissions
 status: stable
 order: 3
 identifier: smart-permissions
-permalink: /smart-permissions/
+permalink: /sp/
 main-color: seagreen
 logo-acronym: SP
 logo-section: Auth
