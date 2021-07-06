@@ -6,6 +6,7 @@ author: Alexandre Oliveira
 author-url: https://www.linkedin.com/in/alegauss/
 banner-image: /static_files/img/blog/digital-beings-matter.png
 social-image: https://viglet.com/static_files/img/blog/digital-beings-matter.png
+date: 02-01-2021
 ---
 
 ## Motivation
