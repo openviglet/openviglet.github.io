@@ -44,6 +44,11 @@ layout: default
     <div>
         <div class="row text-center" style="margin:0px;display: inherit;">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered" style="margin: 0px; padding: 0px;">
+                {%- if page.logo -%}
+                <div style="text-align: center;margin-bottom: 20px">
+                    <img src="{{ page.logo }}">
+                </div>
+                {%- else -%}
                 <div style="text-align: center;margin-bottom: 20px">
                     <div
                         style="letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;display: inline-block;text-align: left;">
@@ -59,6 +64,7 @@ layout: default
                         </div>
                     </div>
                 </div>
+                {%- endif -%}
                 <div style="font-size:40px;text-align:center;line-height: 120%;">
                     <b>{{ page.full-name }}</b>
                 </div>
@@ -115,8 +121,8 @@ layout: default
         <div class="row text-center" style="margin:0px;display: inherit">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered">
                 <div class="row text-center" style="margin:0px; display: flex;;width: 100%;">
-                    
-                    
+
+
                     <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-centered ">
                         <div>
                             {% for feature in filtered_features %}
@@ -131,15 +137,15 @@ layout: default
                             {% endfor %}
                         </div>
                     </div>
-                   
-                    <div class="col-lg-5 col-centered vig-hide-md" >
+
+                    <div class="col-lg-5 col-centered vig-hide-md">
                         {%- if page.twitter-url -%}
-                            {% assign twitter-height = "calc( 100% - 24px )" %}
-                            {%- if page.github -%}
-                                {% assign twitter-height = "50%" %}
-                            {%- endif -%}
+                        {% assign twitter-height = "calc( 100% - 24px )" %}
+                        {%- if page.github -%}
+                        {% assign twitter-height = "50%" %}
+                        {%- endif -%}
                         <div id="twittercard" class="card abc" style="height: {{ twitter-height }};">
-                            <a  class="twitter-timeline" data-height="100%" data-theme="light" data-link-color="#ff6347"
+                            <a class="twitter-timeline" data-height="100%" data-theme="light" data-link-color="#ff6347"
                                 href="{{ page.twitter-url }}?ref_src=twsrc%5Etfw">Tweets
                                 by shiocms</a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -147,57 +153,57 @@ layout: default
                         {%- endif -%}
                         {%- if page.github -%}
                         <div id="vigletfeedbox" class="card mt-4" style="height: calc( 50% - 47px );"">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    Track the progress of {{ page.short-name }} development
-                                </h5>
-                                <h6 class="card-subtitle">
-                                    {%- if page.github-ci-url -%}
-                                    <a href="{{ page.github-ci-url }}" target="_blank"><img
-                                            src="{{ page.github-ci-url }}/badge.svg"></a>
-                                    {%- endif -%}
-                                </h6>
+                            <div class=" card-body">
+                            <h5 class="card-title">
+                                Track the progress of {{ page.short-name }} development
+                            </h5>
+                            <h6 class="card-subtitle">
+                                {%- if page.github-ci-url -%}
+                                <a href="{{ page.github-ci-url }}" target="_blank"><img
+                                        src="{{ page.github-ci-url }}/badge.svg"></a>
+                                {%- endif -%}
+                            </h6>
 
-                                <div id="vigletfeed" class="panel-body"
-                                    style="text-align: left; overflow-y: auto; max-height: 466px">
-                                </div>
+                            <div id="vigletfeed" class="panel-body"
+                                style="text-align: left; overflow-y: auto; max-height: 466px">
                             </div>
                         </div>
-                        {%- endif -%}
-
                     </div>
+                    {%- endif -%}
+
                 </div>
             </div>
         </div>
-        {%- endif -%}
-        {% assign filtered_modules = site.modules | where:"solution", page.identifier %}
-        {%- if filtered_modules.size > 0 -%}
-        <div class="container px-4 py-5">
-            <h2 class="pb-2 border-bottom">Integration</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                {% for module in filtered_modules %}
-                {%- if module.github-url -%}
-                <a href="{{ module.github-url }}" target="_blank" style="text-decoration: none;color: inherit;">
-                    {%- endif -%}
-                    <div class="col d-flex align-items-start">
-                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                            <svg class="bi" width="1em" height="1em">
-                                <use xlink:href="#toggles2" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h2>{{ module.title }}</h2>
-                            <p>{{ module.description }}</p>
-                        </div>
-                    </div>
-                    {%- if module.github-url -%}
-                </a>
-                {%- endif -%}
-                {% endfor %}
-            </div>
-        </div>
-        {%- endif -%}
     </div>
+    {%- endif -%}
+    {% assign filtered_modules = site.modules | where:"solution", page.identifier %}
+    {%- if filtered_modules.size > 0 -%}
+    <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">Integration</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            {% for module in filtered_modules %}
+            {%- if module.github-url -%}
+            <a href="{{ module.github-url }}" target="_blank" style="text-decoration: none;color: inherit;">
+                {%- endif -%}
+                <div class="col d-flex align-items-start">
+                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#toggles2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2>{{ module.title }}</h2>
+                        <p>{{ module.description }}</p>
+                    </div>
+                </div>
+                {%- if module.github-url -%}
+            </a>
+            {%- endif -%}
+            {% endfor %}
+        </div>
+    </div>
+    {%- endif -%}
+</div>
 </div>
 {%- include contact_static.html -%}
 {%- include solution-scripts.html -%}

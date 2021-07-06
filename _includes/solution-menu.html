@@ -4,6 +4,11 @@
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
             <div class="navbar-header pull-left">
                 <a href="{{ solution.permalink }}" style="text-decoration: none;">
+                    {%- if page.logo -%}
+                    <div style="text-align: center;margin-bottom: 20px">
+                        <img src="{{ page.logo }}" style="width: 40px;">
+                    </div>
+                    {%- else -%}
                     <div class="pull-right hidden-xs"
                         style="line-height: 1.42857143;">
                         <div
@@ -13,6 +18,7 @@
                             </div>
                         </div>
                     </div>
+                    {%- endif -%}
                 </a>
             </div>
         </a>

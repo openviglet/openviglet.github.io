@@ -17,11 +17,11 @@
             style="color:#ffc63a">Become a Partner</a></li>
       </ul>
       <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-        <a title="Contact" href="#contact" ><i class="bi bi-chat" style="color:white;font-size: 25px;" aria-hidden="true"></i></a>
+        <a title="Contact" href="#contact"><i class="bi bi-chat" style="color:white;font-size: 25px;"
+            aria-hidden="true"></i></a>
       </div>
       <div class="dropdown">
-        <a href="#" class="text-white" id="dropdownProducts"
-          data-bs-toggle="dropdown" aria-expanded="false">
+        <a href="#" class="text-white" id="dropdownProducts" data-bs-toggle="dropdown" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
             class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
             <path
@@ -29,9 +29,11 @@
             </path>
           </svg>
         </a>
-        <div class="dropdown-menu  dropdown-menu-left" aria-labelledby="dropdownProducts" style="width: 235px">
+        <div class="dropdown-menu  dropdown-menu-left" aria-labelledby="dropdownProducts"
+          style="width: 235px;padding: 15px;">
           <div class="row container" style="margin: 0px;">
             {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+            <span style="font-size: 15px;padding: 0px;font-weight: bolder;">Products</span>
             {% for solution in stable_solutions %}
             <div class="col-6" style="padding: 10px 0px;;">
               <a href="{{ solution.permalink }}" data-toggle="tooltip"
@@ -51,6 +53,15 @@
               </a>
             </div>
             {% endfor %}
+          </div>
+          <div class="row container border-top" style="margin: 0px;">
+            <span style="font-size: 15px;padding: 0px;font-weight: bolder;margin-top: 10px;">Service</span>
+            <a href="https://www.doleedo.com/" target="_blank" style="text-decoration: none;display: table-cell;padding: 0px;padding-top: 10px;">
+              <div>
+                <img src="/static_files/svg/doleedo-logo-only.svg" style="width: 48px">
+              </div>
+              <span style="font-size: 15px;color: black">Doleedo</span>
+            </a>
           </div>
         </div>
       </div>
