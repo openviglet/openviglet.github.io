@@ -6,6 +6,18 @@
                 <span style="font-size: larger;font-weight: bolder;margin-left: 3px;">Viglet.</span>
                 <small class="d-block mb-3 text-muted">© 2017– {{ 'now' | date: "%Y" }}</small>
             </div>
+
+            <div class="col-6 col-md">
+                <h5>Solutions</h5>
+                <ul class="list-unstyled text-small">
+                    {% for category in site.categories %}
+                    <li class="mb-1" style="margin-bottom: 10px !important;"><a
+                        class="link-secondary text-decoration-none" href="{{category.url}}">
+                        <span style="margin-left: 5px;">{{category.menu-title}}</span>
+                    </a></li>
+                    {% endfor %}
+                </ul>
+            </div>
             <div class="col-6 col-md">
                 <h5>Products</h5>
                 <ul class="list-unstyled text-small">
@@ -38,6 +50,7 @@
             <div class="col-6 col-md">
                 <h5>Resources</h5>
                 <ul class="list-unstyled text-small" style="margin-bottom: 5px !important;">
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="/blog">Blog</a></li>
                     <li class="mb-1"><a class="link-secondary text-decoration-none"
                             href="https://docs.viglet.com">Documentation</a></li>
                     <li class="mb-1"><a class="link-secondary text-decoration-none" href="/partner">Become a Partner</a>

@@ -40,6 +40,9 @@ collections:
     permalink: /:collection/:title
   solutions:
     output: true
+  categories:
+    output: true
+    permalink: /solution/:title
   features:
     output: false
   modules:

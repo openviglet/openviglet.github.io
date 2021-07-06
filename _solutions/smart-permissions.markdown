@@ -15,4 +15,5 @@ twitter-url: https://twitter.com/VigletTweet
 youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
 social-image: https://viglet.com/static_files/img/motion_logo.png
 facebook-url: https://www.facebook.com/viglet
+categories: ["ecm", "opentext"]
 ---

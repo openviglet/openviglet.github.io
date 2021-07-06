@@ -2,9 +2,9 @@
 layout: default
 social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
 ---
-<div>
+<div class="container">
     <div class="row text-center" style="margin:0px;display: inherit;">
-        <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11 col-centered">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-centered" style="padding: 0px;">
             <img src="/static_files/img/banner/pure_chemistry_5_solutions.png" alt="Pure Chemistry" style="width:100%">
             <h2 style="margin:30px; text-align: center;">We look at the new challenges as a great opportunity to find
                 solutions that are scalable and persistent. </h2>
@@ -31,44 +31,8 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
     </div>
 </a>
 <div class="d-none d-md-block">
-    {% assign row_type = false %}
+   
     {% assign stable_solutions = site.solutions | where:"status", "stable" %}
-    {% for solution in stable_solutions %}
-
-    {%- if row_type -%}
-    {% assign row_type = false %}
-    {%- else -%}
-    {% assign row_type = true %}
-    {%- endif -%}
-
-    {%- if row_type -%}
-    <div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
-        <div class="col-lg-7 col-md-6 col-centered" style="text-align:right">
-            <h2><a target="_blank" href="{{ solution.permalink }}"
-                    style="color:#444;text-decoration: none;font-weight: bolder;">{{ solution.short-name }}</a></h2>
-            <h3>{{ solution.description }}</h3>
-
-        </div>
-        <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm" style="text-align:right;max-width: 245px;">
-            <a target="_blank" href="{{ solution.permalink }}">
-                {%- include solution-home-logo.html -%}
-            </a>
-        </div>
-    </div>
-    {%- else -%}
-    <div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
-        <div class="col-lg-2 col-md-3  col-centered hidden-xs hidden-sm;" style="max-width: 205px;">
-            <a target="_blank" href="{{ solution.permalink }}">
-                {%- include solution-home-logo.html -%}
-            </a>
-        </div>
-        <div class="col-lg-7 col-md-6 col-centered" style="padding-left:40px">
-            <h2><a target="_blank" href="{{ solution.permalink }}"
-                    style="color:#444;text-decoration: none;font-weight: bolder;">{{ solution.short-name }}</a></h2>
-            <h3>{{ solution.description }}</h3>
-        </div>
-    </div>
-    {%- endif -%}
-    {% endfor %}
+    {%- include solution-list.html -%}
 </div>
 {%- include contact_static.html -%}

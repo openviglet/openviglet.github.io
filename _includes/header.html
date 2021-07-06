@@ -9,44 +9,48 @@
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-top: 4px;">
       </ul>
 
-      <div style="display: table;">
-        <a href="/" data-toggle="tooltip" title="Pure Chemistry" class="d-none d-lg-block"
-          style="text-decoration: none;display: table-cell;">
-          <div class="navbar-header pull-right hidden-xs"
-            style="margin-right: 15px;margin-top: 5px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
-            <span>Pure Chemistry</span>
-          </div>
-        </a>
-
-        {% assign stable_solutions = site.solutions | where:"status", "stable" %}
-
-        {% for solution in stable_solutions %}
-        <a href="{{ solution.permalink }}" data-toggle="tooltip"
-          title="{{ solution.short_name }} - {{ solution.description }}"
-          style="text-decoration: none;display: table-cell;">
-          <div class="navbar-header pull-right hidden-xs"
-            style="text-align: left;margin-right: 3px;margin-left:3px; margin-top: 0px; letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
-            <div
-              style="background: {{ solution.main-color }};width: 30px;height: 30px;color: papayawhip;padding-top: 2px;padding-left: 2px;font-size: 14px;font-weight:  bolder;border-radius: 3px">
-              <div style="margin-top: 5px; margin-left: 2px;">
-                {{ solution.logo-acronym }}
-              </div>
-            </div>
-          </div>
-        </a>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" style="padding-top: 4px;">
+        {% for category in site.categories %}
+        <li><a href="{{category.url}}" class="nav-link px-2 text-white">{{category.menu-title}}</a></li>
         {% endfor %}
-        <a href="/partner" data-toggle="tooltip" title="Become a Partner"
-          style="text-decoration: none;display: table-cell;">
-          <div class="navbar-header pull-right hidden-xs"
-            style="text-align: left;margin-right: 3px;margin-left: 6px;margin-top: 0px;letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
-            <div
-              style="background: #ffc63a;width: 135px;height: 30px;color: black;padding-top: 2px;font-size: 14px;font-weight: bold;border-radius: 3px;">
-              <div style="margin-top: 5px;text-align: center;">
-                Become a Partner
-              </div>
-            </div>
-          </div>
+        <li><a href="/partner" data-toggle="tooltip" title="Become a Partner" class="nav-link px-2"
+            style="color:#ffc63a">Become a Partner</a></li>
+      </ul>
+
+      <div class="dropdown">
+        <a href="#" class="text-white" id="dropdownProducts"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
+            <path
+              d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z">
+            </path>
+          </svg>
         </a>
+        <div class="dropdown-menu  dropdown-menu-left" aria-labelledby="dropdownProducts" style="width: 235px">
+          <div class="row container" style="margin: 0px;">
+            {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+            {% for solution in stable_solutions %}
+            <div class="col-6" style="padding: 10px 0px;;">
+              <a href="{{ solution.permalink }}" data-toggle="tooltip"
+                title="{{ solution.short_name }} - {{ solution.description }}"
+                style="text-decoration: none;display: table-cell;">
+                <div
+                  style="text-align: left;margin-right: 3px;margin-left:3px; margin-top: 0px; letter-spacing: 0;line-height: 1.42857143;margin-bottom: 0;color: #a4b1b2;text-transform: none;">
+                  <div
+                    style="
+                        margin-bottom: 6px;background: {{ solution.main-color }};width: 48px;height: 48px;color: papayawhip;padding-top: 10px;padding-left: 4px;font-size: 20px;font-weight: bolder;border-radius: 6px;">
+                    <div style="margin-top: 5px; margin-left: 2px;">
+                      {{ solution.logo-acronym }}
+                    </div>
+                  </div>
+                  <span style="font-size: 15px;color: black">{{ solution.short-name }}</span>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>

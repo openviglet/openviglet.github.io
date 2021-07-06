@@ -24,4 +24,5 @@ download-size: 110 MB
 download-url: https://github.com/viltgroup/minium-developer/releases/download/minium-developer-2.6.0/minium-developer-2.6.0-linux.tar.gz
 release: 2.6.0
 file-type: .tar.gz
+categories: ["website"]
 ---

@@ -1,0 +1,31 @@
+{% assign row_type = false %}
+{% for solution in stable_solutions %}
+{%- if row_type -%}
+<div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
+    <div class="col-lg-7 col-md-6 col-centered" style="text-align:right">
+        <h2><a target="_blank" href="{{ solution.permalink }}"
+                style="color:#444;text-decoration: none;font-weight: bolder;">{{ solution.short-name }}</a></h2>
+        <h3>{{ solution.description }}</h3>
+
+    </div>
+    <div class="col-lg-2 col-md-3 col-centered hidden-xs hidden-sm" style="text-align:right;max-width: 245px;">
+        <a target="_blank" href="{{ solution.permalink }}">
+            {%- include solution-home-logo.html -%}
+        </a>
+    </div>
+</div>
+{%- else -%}
+<div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
+    <div class="col-lg-2 col-md-3  col-centered hidden-xs hidden-sm;" style="max-width: 205px;">
+        <a target="_blank" href="{{ solution.permalink }}">
+            {%- include solution-home-logo.html -%}
+        </a>
+    </div>
+    <div class="col-lg-7 col-md-6 col-centered" style="padding-left:40px">
+        <h2><a target="_blank" href="{{ solution.permalink }}"
+                style="color:#444;text-decoration: none;font-weight: bolder;">{{ solution.short-name }}</a></h2>
+        <h3>{{ solution.description }}</h3>
+    </div>
+</div>
+{%- endif -%}
+{% endfor %}

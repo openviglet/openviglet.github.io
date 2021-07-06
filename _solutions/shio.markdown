@@ -30,4 +30,5 @@ app-password: admin
 social-image: https://avatars.githubusercontent.com/u/38250020?s=280&amp;v=4
 facebook-url: https://www.facebook.com/ShioCMS
 file-type: .jar
+categories: ["website"]
 ---
