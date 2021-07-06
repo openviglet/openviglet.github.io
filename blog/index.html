@@ -1,0 +1,21 @@
+---
+layout: default
+social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
+---
+<div class="d-none d-md-block">
+    {% for blog in site.blog %}
+    <div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
+        <div class="col-lg-2 col-md-3  col-centered hidden-xs hidden-sm;" style="max-width: 205px;">
+            <a target="_blank" href="{{ blog.url }}">
+               <img src="{{blog.banner-image}}" style="width: 100%;">
+            </a>
+        </div>
+        <div class="col-lg-7 col-md-6 col-centered" style="padding-left:40px">
+            <h2><a  href="{{ blog.url }}"
+                    style="color:#444;text-decoration: none;font-weight: bolder;">{{blog.title}}</a></h2>
+            <h3>{{ blog.description }}</h3>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{%- include contact_static.html -%}
