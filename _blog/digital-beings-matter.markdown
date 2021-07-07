@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Digital Beings Matter
-description: Understand the life of an object and its importance
+description: Understand the life of an object and its importance.
 author: Alexandre Oliveira
 author-url: https://www.linkedin.com/in/alegauss/
 banner-image: /static_files/img/blog/digital-beings-matter.png

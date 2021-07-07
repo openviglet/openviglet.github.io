@@ -37,7 +37,7 @@ plugins:
 collections:
   blog:
     output: true
-    permalink: /:collection/:title
+    permalink: /research/:title
   solutions:
     output: true
   categories:
