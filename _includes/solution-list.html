@@ -1,6 +1,6 @@
 {% for solution in stable_solutions %}
-<div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;">
-    <div class="col-lg-2 col-md-3  col-centered hidden-xs hidden-sm;" style="max-width: 205px;">
+<div class="row text-center" style="margin: 0px;margin-top:50px;display: inherit;min-height: 180px;">
+    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-centered hidden-xs hidden-sm;" style="width: 205px;float: left;">
 
         {%- if solution.service-url -%}
         <a target="_blank" href="{{ solution.service-url }}">
@@ -15,7 +15,7 @@
         {%- endif -%}
 
     </div>
-    <div class="col-lg-7 col-md-6 col-centered" style="padding-left:40px">
+    <div class="col-lg-10 col-md-6  col-sm-6 col-xs-6 col-centered" style="width: calc(100% - 215px);"> 
         <h2> {%- if solution.service-url -%}
             <a href="{{ solution.service-url }}" target="_blank" style="color:#444;text-decoration: none;font-weight: bolder;">{{
                 solution.short-name }}</a>
@@ -24,7 +24,7 @@
                 solution.short-name }}</a>
                 {%- endif -%}
             </h2>
-        <h3>{{ solution.description }}</h3>
+        <h3 style="font-size: 21px;">{{ solution.description }}</h3>
     </div>
 </div>
 {% endfor %}
