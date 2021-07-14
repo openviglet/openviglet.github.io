@@ -31,8 +31,20 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
     </div>
 </a>
 <div class="container">
-   
-    {% assign stable_solutions = site.solutions | where:"status", "stable" %}
-    {%- include solution-list.html -%}
+    <div class="row text-center" style="margin:0px; display: flex;;width: 100%;margin-top: 30px;">
+        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-centered ">
+            {% assign stable_solutions = site.solutions | where:"status", "stable" %}
+            {%- include solution-list.html -%}
+        </div>
+        <div class="col-lg-5 col-centered vig-hide-md">
+            {% assign twitter-height = "100%" %}
+            <div id="twittercard" class="card abc" style="height: {{ twitter-height }};">
+                <a class="twitter-timeline" data-height="100%" data-theme="light" data-link-color="#ff6347"
+                    href="https://twitter.com/VigletTweet?ref_src=twsrc%5Etfw">Tweets
+                    by VigletTweet</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
 </div>
 {%- include contact_static.html -%}
