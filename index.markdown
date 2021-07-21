@@ -4,5 +4,5 @@
 
 layout: home
 title: Viglet
-description: Artificial Intelligence accessible to everyone
+description: We look at the new challenges as a great opportunity to find solutions that are scalable and persistent.
 ---
