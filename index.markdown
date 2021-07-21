@@ -5,4 +5,5 @@
 layout: home
 title: Viglet
 description: We look at the new challenges as a great opportunity to find solutions that are scalable and persistent.
+social-image: "https://viglet.org/static_filesimg/banner/pure_chemistry_5_solutions.jpg"
 ---
