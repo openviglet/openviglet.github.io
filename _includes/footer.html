@@ -1,31 +1,28 @@
 <div class="container py-3">
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
-            <div class="col-3 col-md">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                 <img class="mb-2" src="/static_files/img/viglet_logo_sm.png" alt="" style="width:30px; height:30px">
                 <span style="font-size: larger;font-weight: bolder;margin-left: 3px;">Viglet.</span>
                 <small class="d-block mb-3 text-muted">© 2017– {{ 'now' | date: "%Y" }}</small>
-            </div>
 
-            <div class="col-6 col-md">
                 <h5>Solutions</h5>
                 <ul class="list-unstyled text-small">
                     {% for category in site.categories %}
-                    <li class="mb-1" style="margin-bottom: 10px !important;"><a
-                        class="link-secondary text-decoration-none" href="{{category.url}}">
-                        <span style="margin-left: 5px;">{{category.menu-title}}</span>
-                    </a></li>
+                    <li class="mb-1" style="margin-bottom: 10px !important;">
+                        <a class="link-secondary text-decoration-none" href="{{category.url}}">
+                            <span style="margin-left: 5px;">{{category.menu-title}}</span>
+                        </a>
+                    </li>
                     {% endfor %}
-                </ul>            
+                </ul>
             </div>
-            <div class="col-6 col-md">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                 <h5>Products</h5>
                 <ul class="list-unstyled text-small">
 
-                    {% assign stable_solutions = site.solutions | where:"status", "stable" %}
-                    {% for solution in stable_solutions %}
-                    <li class="mb-1" style="margin-bottom: 10px !important;"><a
-                            class="link-secondary text-decoration-none" href="{{ solution.permalink }}">
+                    {% assign stable_solutions = site.solutions | where:"status", "stable" %} {% for solution in stable_solutions %}
+                    <li class="mb-1" style="margin-bottom: 10px !important;"><a class="link-secondary text-decoration-none" href="{{ solution.permalink }}">
                             {%- include solution-footer-logo.html -%}
                             <span style="margin-left: 5px;">{{ solution.short-name }}</span>
                         </a></li>
@@ -33,34 +30,32 @@
                 </ul>
             </div>
 
-            <div class="col-6 col-md">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                 <h5>Incubator</h5>
                 <ul class="list-unstyled text-small">
 
-                    {% assign unstable_solutions = site.solutions | where:"status", "unstable" %}
-                    {% for solution in unstable_solutions %}
-                    <li class="mb-1" style="margin-bottom: 10px !important;"><a
-                            class="link-secondary text-decoration-none" href="{{ solution.permalink }}">
+                    {% assign unstable_solutions = site.solutions | where:"status", "unstable" %} {% for solution in unstable_solutions %}
+                    <li class="mb-1" style="margin-bottom: 10px !important;"><a class="link-secondary text-decoration-none" href="{{ solution.permalink }}">
                             {%- include solution-footer-logo.html -%}
                             <span style="margin-left: 5px;">{{ solution.short-name }}</span>
                         </a></li>
                     {% endfor %}
                 </ul>
             </div>
-            <div class="col-6 col-md">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                 <h5>Service</h5>
                 <ul class="list-unstyled text-small">
-                    <li class="mb-1" style="margin-bottom: 10px !important;"><a
-                        class="link-secondary text-decoration-none" href="https://www.doleedo.com" target="_blank">
-                        <img src="https://viglet.com/static_files/svg/doleedo-logo-only.svg" style="width: 30px;filter: gray;-webkit-filter: grayscale(1);">
-                        <span style="margin-left: 5px;">Doleedo</span>
-                    </a></li>
+                    <li class="mb-1" style="margin-bottom: 10px !important;">
+                        <a class="link-secondary text-decoration-none" href="https://www.doleedo.com" target="_blank">
+                            <img src="https://viglet.com/static_files/svg/doleedo-logo-only.svg" style="width: 30px;filter: gray;-webkit-filter: grayscale(1);">
+                            <span style="margin-left: 5px;">Doleedo</span>
+                        </a>
+                    </li>
                 </ul>
                 <h5>Resources</h5>
                 <ul class="list-unstyled text-small" style="margin-bottom: 5px !important;">
                     <li class="mb-1"><a class="link-secondary text-decoration-none" href="/research">Research</a></li>
-                    <li class="mb-1"><a class="link-secondary text-decoration-none"
-                            href="https://docs.viglet.com">Documentation</a></li>
+                    <li class="mb-1"><a class="link-secondary text-decoration-none" href="https://docs.viglet.com">Documentation</a></li>
                     <li class="mb-1"><a class="link-secondary text-decoration-none" href="/partner">Become a Partner</a>
                     </li>
                     <li>
@@ -71,8 +66,7 @@
                                         aria-hidden="true"></i></a>
                             </div>
                             <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
-                                <a title="YouTube" href="https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw"
-                                    target="_blank"><i class="bi bi-youtube" style="color:#6c757d;font-size: 25px;"
+                                <a title="YouTube" href="https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw" target="_blank"><i class="bi bi-youtube" style="color:#6c757d;font-size: 25px;"
                                         aria-hidden="true"></i></a>
                             </div>
                             <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px;padding: 0px;">
