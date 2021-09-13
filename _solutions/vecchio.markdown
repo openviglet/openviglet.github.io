@@ -5,7 +5,7 @@ status: unstable
 order: 5
 identifier: vecchio
 permalink: /vecchio/
-get-started: https://openvecchio.github.io/vecchio/
+get-started: https://docs.viglet.com/vecchio/
 pdf-get-started: https://github.com/openvecchio/vecchio/releases/download/v0.3.2/developer-guide.pdf
 github: https://github.com/openvecchio
 github-org: openvecchio
