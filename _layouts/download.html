@@ -30,6 +30,10 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
         border-radius: .75rem;
     }
 </style>
+{% assign solution = site.solutions | where:"identifier", page.identifier | first %}
+
+{%- include github_link.html -%}
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="toggles2" viewBox="0 0 16 16">
         <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z" />
@@ -39,7 +43,7 @@ social-image: "https://viglet.org/static_files/img/viglet_logo_hd.png"
     </symbol>
 </svg>
 <div>
-    {% assign solution = site.solutions | where:"identifier", page.identifier | first %}
+    
     {%- include solution-menu.html -%}
     <div class="row text-center"
         style="display: inherit;margin:0px;background:{{ solution.main-color }};color: navajowhite">

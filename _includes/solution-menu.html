@@ -26,36 +26,6 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="{{ solution.permalink }}" class="nav-link px-2 fs-5  d-none  d-lg-block" style="color: black;font-weight: bolder;" >{{ solution.short-name }}</a></li>
         </ul>
-  
-        <div class="text-end">
-            <div class="row" style="margin:0px">
-                {%- if solution.github -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-                    <a title="GitHub" href="{{ solution.github }}" target="_blank"><i class="bi bi-github" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
-                </div>
-                {%- endif -%}
-                {%- if solution.slack-url -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-                    <a title="Community" href="{{ solution.slack-url }}" target="_blank"><i class="bi bi-slack" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
-                </div>
-                {%- endif -%}
-                {%- if solution.twitter-url -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-                    <a title="Twitter" href="{{ solution.twitter-url }}" target="_blank"><i class="bi bi-twitter" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
-                </div>
-                {%- endif -%}
-                {%- if solution.facebook-url -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-                    <a title="Facebook" href="{{ solution.facebook-url }}" target="_blank"><i class="bi bi-facebook" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
-                </div>
-                {%- endif -%}
-                {%- if solution.facebook-url -%}
-                <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs" style="width:40px">
-                    <a title="YouTube" href="{{ solution.youtube-channel }}" target="_blank"><i class="bi bi-youtube" style="color:{{ solution.main-color }};font-size: 25px;" aria-hidden="true"></i></a>
-                </div>
-                {%- endif -%}
-            </div>
-        </div>
       </div>
     </div>
   </header>
