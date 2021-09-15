@@ -5,7 +5,7 @@ status: unstable
 identifier: rubikube
 order: 6
 permalink: /rubikube/
-github: https://github.com/Rubikube
+github: https://github.com/Rubikube/rubikube
 github-org: Rubikube
 main-color: darkslategray
 logo-acronym: Ru

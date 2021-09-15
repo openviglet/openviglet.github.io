@@ -5,7 +5,7 @@ status: unstable
 identifier: darwin
 order: 4
 permalink: /darwin/
-github: https://github.com/opendarwin
+github: https://github.com/opendarwin/darwin
 github-org: opendarwin
 main-color: sienna
 logo-acronym: Da

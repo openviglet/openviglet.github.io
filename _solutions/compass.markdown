@@ -5,7 +5,7 @@ status: unstable
 identifier: compass
 order: 3
 permalink: /compass/
-github: https://github.com/CompassDXP
+github: https://github.com/CompassDXP/compass
 github-org: CompassDXP
 main-color: black
 logo-acronym: Co.

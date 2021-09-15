@@ -5,7 +5,7 @@ status: unstable
 identifier: gauss
 order: 5
 permalink: /gauss/
-github: https://github.com/GaussMoney
+github: https://github.com/GaussMoney/gauss
 github-org: GaussMoney
 main-color: darkgreen
 logo-acronym: Ga

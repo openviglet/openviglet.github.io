@@ -7,7 +7,7 @@ identifier: vecchio
 permalink: /vecchio/
 get-started: https://docs.viglet.com/vecchio/
 pdf-get-started: https://github.com/openvecchio/vecchio/releases/download/v0.3.2/developer-guide.pdf
-github: https://github.com/openvecchio
+github: https://github.com/openvecchio/vecchio
 github-org: openvecchio
 release: 0.3.2
 main-color: mediumseagreen

@@ -5,7 +5,7 @@ status: unstable
 identifier: nakamoto
 order: 5
 permalink: /nakamoto/
-github: https://github.com/opennakamoto
+github: https://github.com/opennakamoto/nakamoto
 github-org: opennakamoto
 main-color: hotpink
 logo-acronym: Na
