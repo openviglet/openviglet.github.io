@@ -8,7 +8,7 @@ permalink: /shio/
 get-started: https://docs.viglet.com/shio/
 github: https://github.com/ShioCMS/shio
 github-org: ShioCMS
-release: 0.3.7
+release: 0.3.8
 main-color: tomato
 logo-acronym: Sh
 logo-section: CMS
@@ -22,7 +22,7 @@ youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
 youtube-playlist-id: PLucp-3sa10A40BeGVAvLChPwONTfQ0nmY
 download-message: Download Shio CMS and create your site.
 download-size: 155 MB
-download-url: https://github.com/ShioCMS/shio/releases/download/v0.3.7/viglet-shio.jar
+download-url: https://github.com/ShioCMS/shio/releases/download/v0.3.8/viglet-shio.jar
 run-jar: viglet-shio.jar
 run-port: 2710
 app-login: admin
