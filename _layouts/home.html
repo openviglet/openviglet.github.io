@@ -39,13 +39,6 @@ layout: default
             </div>
             {% assign stable_solutions = site.solutions | where:"status", "stable" %}
             {%- include solution-list.html -%}
-            <div class="row" style="margin-top: 50px;">
-                <div class="col-lg-12">
-                    <h2 class="pb-2 border-bottom" style="margin-bottom: 18px;">Service</h2>
-                </div>
-            </div>
-            {% assign stable_solutions = site.solutions | where:"status", "service" %}
-            {%- include solution-list.html -%}
         </div>
         <div class="col-lg-5 col-centered vig-hide-md">
             {% assign twitter-height = "100%" %}
