@@ -142,16 +142,6 @@ layout: default
                     </div>
 
                     <div class="col-lg-5 col-centered vig-hide-md">
-                        {% assign twitter-height = "calc( 100% - 24px )" %}
-                        {%- if page.github -%}
-                        {% assign twitter-height = "50%" %}
-                        {%- endif -%}
-                        <div id="twittercard" class="card abc" style="height: {{ twitter-height }};">
-                            <a class="twitter-timeline" data-height="100%" data-theme="light" data-link-color="#ff6347"
-                                href="https://twitter.com/VigletTweet?ref_src=twsrc%5Etfw">Tweets
-                                by VigletTweet</a>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </div>
                         {%- if page.github -%}
                         <div id="vigletfeedbox" class="card mt-4" style="height: calc( 50% - 47px );">
                             <div class=" card-body">
@@ -206,5 +196,4 @@ layout: default
     {%- endif -%}
 </div>
 </div>
-{%- include contact_static.html -%}
 {%- include solution-scripts.html -%}
