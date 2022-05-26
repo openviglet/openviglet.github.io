@@ -5,7 +5,7 @@ status: stable
 order: 3
 identifier: shio
 permalink: /shio/
-get-started: https://docs.viglet.com/shio/
+get-started: https://openviglet.github.io/docs/shio/
 github: https://github.com/ShioCMS/shio
 github-org: ShioCMS
 release: 0.3.8
@@ -18,8 +18,6 @@ description: Model Content, Use GraphQL and Create Site using Javascript with Na
 github-ci-url: https://github.com/ShioCMS/shio/actions/workflows/build.yml
 twitter-url: https://twitter.com/shiocms
 slack-url: https://join.slack.com/t/shiocms/shared_invite/zt-pm6w20zq-ywfhQj0zf_mejan0_xXqJw
-youtube-channel: https://www.youtube.com/channel/UCMOUMnOecpTV05LpLytawuw
-youtube-playlist-id: PLucp-3sa10A40BeGVAvLChPwONTfQ0nmY
 download-message: Download Shio CMS and create your site.
 download-size: 179 MB
 download-url: https://github.com/ShioCMS/shio/releases/download/v0.3.8/viglet-shio.jar
