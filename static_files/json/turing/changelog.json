@@ -1,30 +1,66 @@
-
-[
-	{
-		"name": ""
-		, "notes": ["[New] Chatbot.", 
-			"[New] PostgreSQL JDBC."]
-		, "pub_date": "2021-05-31T12:00:00Z"
-		, "version": "0.3.3"
-	},
-{
-    "name": ""
-    , "notes": ["[New] Unit Test.", 
-		"[New] SpaCy Plugin.", 
-		"[New] DockerFile.", 
-		"[New] SN Site: Import.", 
-		"[New] Export SN Site.",
-		"[New] Default Fields into Search.",
-		"[New] NLP and Thesaurus Activation.", 
-		"[New] Dynamic Fields: Text, Description and Date.", 
-		"[New] SN: MaxRows.",
-		"[New] Deindexing by Type.",
-		"[Improved] Check Box fields on SN were fixed.",
-		"[Improved] Using lib instead of modules.",
-		"[Improved] Release Resources: HTTPClient and SolrServer.",
-		"[Improved] SNSite using UUID.",
-		"[Improved] Remove newline and trim to concatenated Text.",
-		"[Improved] Spring Boot 2.1.2."]
-    , "pub_date": "2019-02-08T12:00:00Z"
-    , "version": "0.3.2"
-}]
+[{
+    "name": "",
+    "notes": [
+      "[New] Store information about user accesses and searches performed.",
+	  "[New] Reports - Generates access report, including targeting rules.",
+	  "[New] Latest searches - Allows you to show the latest searches performed by the user",
+	  "[Improved] Java 17",
+	  "[Improved] Spring Boot 2.7.4"
+    ],
+    "pub_date": "2021-09-22T12:00:00Z",
+    "version": "0.3.6"
+  },
+  {
+    "name": "",
+    "notes": [
+      "[New] Spotlight - Show featured content in search terms based on terms. Search positions can be defined.",
+      "[New] Multi language - Can have multiple languages ​​for each site, using a language-specific solr core. During indexing you can define which language will be indexed.",
+      "[New] UI: Angular 13",
+      "[New] Access Logs - Generate turing access log.",
+      "[New] Did you mean? - It is now possible to parameterize to show \"What did you mean?\" showing and correcting the search term automatically.",
+      "[New] Merge provider - If two indexing sources are from the same indexed content, you can use the Merge Provider to merge these content, for example: Indexing the same page by WEM and Apache Nutch.",
+      "[New] turing.solr.timeout property",
+      "[Improved] Java 14",
+      "[Improved] Spring Boot 2.6.4",
+      "[Improved] Gradle 7.4",
+      "[Improved] Auto Complete using Stop words"
+    ],
+    "pub_date": "2021-12-03T12:00:00Z",
+    "version": "0.3.5"
+  },
+  {
+    "name": "",
+    "notes": ["[Improved] Bugs were fixed."],
+    "pub_date": "2021-06-18T12:00:00Z",
+    "version": "0.3.4"
+  },
+  {
+    "name": "",
+    "notes": ["[New] Chatbot.", "[New] PostgreSQL JDBC."],
+    "pub_date": "2021-05-31T12:00:00Z",
+    "version": "0.3.3"
+  },
+  {
+    "name": "",
+    "notes": [
+      "[New] Unit Test.",
+      "[New] SpaCy Plugin.",
+      "[New] DockerFile.",
+      "[New] SN Site: Import.",
+      "[New] Export SN Site.",
+      "[New] Default Fields into Search.",
+      "[New] NLP and Thesaurus Activation.",
+      "[New] Dynamic Fields: Text, Description and Date.",
+      "[New] SN: MaxRows.",
+      "[New] Deindexing by Type.",
+      "[Improved] Check Box fields on SN were fixed.",
+      "[Improved] Using lib instead of modules.",
+      "[Improved] Release Resources: HTTPClient and SolrServer.",
+      "[Improved] SNSite using UUID.",
+      "[Improved] Remove newline and trim to concatenated Text.",
+      "[Improved] Spring Boot 2.1.2."
+    ],
+    "pub_date": "2019-02-08T12:00:00Z",
+    "version": "0.3.2"
+  }
+]
