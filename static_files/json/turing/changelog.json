@@ -1,11 +1,13 @@
 [{
     "name": "",
     "notes": [
-      "[New] Store information about user accesses and searches performed.",
+    "[New] Store information about user accesses and searches performed.",
 	  "[New] Reports - Generates access report, including targeting rules.",
 	  "[New] Latest searches - Allows you to show the latest searches performed by the user",
 	  "[Improved] Java 17",
-	  "[Improved] Spring Boot 2.7.4"
+	  "[Improved] Spring Boot 2.7.6",
+    "[Improved] Gradle 7.5.1",
+    "[Improved] Angular 15"
     ],
     "pub_date": "2022-09-22T12:00:00Z",
     "version": "0.3.6"
