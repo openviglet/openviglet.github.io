@@ -8,7 +8,7 @@ permalink: /turing/
 get-started: https://openviglet.github.io/docs/turing/
 github: https://github.com/openturing/turing
 github-org: openturing
-release: 0.3.6
+release: 0.3.7
 main-color: royalblue
 logo-acronym: Tu
 logo-section: ES
@@ -16,11 +16,11 @@ short-name: Turing ES
 full-name: Viglet Turing ES
 description: Semantic Navigation, Chatbot using Search Engine and Many NLP Vendors.
 github-ci-url: https://github.com/openturing/turing/actions/workflows/build.yml
-github-ci-image: https://img.shields.io/github/actions/workflow/status/openturing/turing/build.yml?branch=0.3.7
+github-ci-image: https://img.shields.io/github/actions/workflow/status/openturing/turing/build.yml?branch=0.3.8
 twitter-url: https://twitter.com/VigletTuring
 download-message: Download Turing ES and add more value to your content.
-download-size: 233 MB
-download-url: https://github.com/openturing/turing/releases/download/v0.3.6/viglet-turing.jar
+download-size: 282 MB
+download-url: https://github.com/openturing/turing/releases/download/v0.3.7/viglet-turing.jar
 run-jar: viglet-turing.jar
 run-port: 2700
 social-image: https://avatars.githubusercontent.com/u/44909290?s=280&amp;v=4
