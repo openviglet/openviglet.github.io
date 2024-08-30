@@ -1,4 +1,27 @@
 [{
+  "name": "",
+  "notes": [
+    "[New] Targeting Rules AND and OR",
+    "[New] Facets Types AND and OR",
+    "[New] Facet Range",
+    "[New] OCR Rest API",
+    "[New] LLM Redaction",
+    "[New] AEM: Using JsonPath",
+    "[New] Targeting Rules With Condition",
+    "[New] Web Crawler",
+    "[New] AEM: Once indexing",
+    "[New] Multi Language Facet",
+    "[Improved] Facet Global Sort",
+    "[Improved] FQ without two points",
+    "[Improved] WebCrawler using TurMultiValue",
+    "[Improved] Group By until 100 groups",
+    "[Improved] Spring Boot 3.2.5",
+    "[Improved] Java 21"
+  ],
+  "pub_date": "2024-04-10T12:00:00Z",
+  "version": "0.3.8"
+},
+  {
     "name": "",
     "notes": [
       "[New] Maven",
