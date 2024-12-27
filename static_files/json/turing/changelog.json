@@ -1,6 +1,33 @@
 [{
   "name": "",
   "notes": [
+    "[New] Exact Match",
+    "[New] Sprinklr Connector",
+    "[New] Semantic Navigation Search with Cache",
+    "[New] Secondary Facets",
+    "[New] Cleanup Facets links",
+    "[New] Facets and Facet Items using AND and OR",
+    "[New] Auto complete sort",
+    "[New] OCR Rest API",
+    "[Improved] Removed Java 21 Preview features",
+    "[Improved] Nutch connector 1.20",
+    "[Improved] AEM connector delta date",
+    "[Improved] AEM connector void index when service is down",
+    "[Improved] Removed OTCA",
+    "[Improved] Sample modules for connectors",
+    "[Improved] Git commit hash in version of connectors",
+    "[Improved] Auto Complete refactory using State Machine",
+    "[Improved] Web Crawler improvements",
+    "[Improved] AEM Connector improvements",
+    "[Improved] Spring Boot 3.4.0",
+    "[Improved] Angular 18"
+  ],
+  "pub_date": "2024-12-25T12:00:00Z",
+  "version": "0.3.9"
+},
+  {
+  "name": "",
+  "notes": [
     "[New] Targeting Rules AND and OR",
     "[New] Facets Types AND and OR",
     "[New] Facet Range",
