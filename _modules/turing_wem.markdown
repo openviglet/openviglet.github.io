@@ -1,8 +1,8 @@
 ---
 title: WEM Listener
 solution: turing
-download: true
-github-url: https://github.com/openturing/turing-wem
-download-url: https://github.com/openturing/turing/releases/download/v0.3.4/turing-wem.zip
+download: false
+github-url: https://github.com/openturing/turing
+download-url: https://github.com/openturing/turing/releases/download/v0.3.9/turing-wem.jar
 description: OpenText Web Experience Management (WEM) Listener to publish content to Turing ES.
 ---
