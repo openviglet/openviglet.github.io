@@ -1,5 +1,5 @@
 ---
-title: AEM
+title: AEM Connector
 solution: turing
 download: true
 github-url: https://github.com/openturing/turing-aem
