@@ -1,5 +1,5 @@
 ---
-title: AEM Plugin
+title: AEM
 solution: turing
 download: true
 github-url: https://github.com/openturing/turing-aem
