@@ -14,7 +14,7 @@ logo-acronym: Tu
 logo-section: ES
 short-name: Turing ES
 full-name: Viglet Turing ES
-description: Semantic Navigation, Chatbot using Search Engine and Generative AI.
+description: Enterprise Search, Semantic Navigation, Chatbot using Search Engine and Generative AI.
 github-ci-url: https://github.com/openturing/turing/actions/workflows/build.yml
 github-ci-image: https://img.shields.io/github/actions/workflow/status/openturing/turing/build.yml?branch=0.3.10
 twitter-url: https://twitter.com/VigletTuring
