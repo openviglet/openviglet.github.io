@@ -6,19 +6,19 @@
     <title>Viglet · Open Source Projects</title>
     <meta
       name="description"
-      content="Viglet open source hub — home of the Model Catalog, a vendor-neutral, kind-aware catalog of AI models, and the Viglet product suite."
+      content="Viglet open source hub: Viglet Dumont (data exchange), Viglet Turing (enterprise search) and Viglet Shio (agent-ready CMS), plus the vendor-neutral Model Catalog."
     />
     <link rel="canonical" href="https://openviglet.github.io/" />
-    <link rel="icon" type="image/png" sizes="60x60" href="/viglet-logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/logos/viglet.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/viglet-logo.png" />
     <link rel="apple-touch-icon" href="/viglet-logo.png" />
-    <link rel="shortcut icon" href="/viglet-logo.png" />
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Viglet · Open Source Projects" />
     <meta
       property="og:description"
-      content="Viglet open source hub — home of the Model Catalog and the Viglet product suite."
+      content="Move it, find it, publish it: Viglet Dumont, Turing and Shio, plus the vendor-neutral Model Catalog."
     />
     <meta property="og:url" content="https://openviglet.github.io/" />
     <meta property="og:image" content="https://openviglet.github.io/og-banner.png" />
@@ -47,12 +47,19 @@
         --muted: #7a6f66;
         --border: #ececec;
         --border-strong: #e0dcd7;
-        /* Viglet brand — warm orange */
-        --brand: #ea580c;
-        --brand-2: #f97316;
+        /* Viglet brand — orange from the logo (#FF6A1A → #F0381C) */
+        --brand: #f0381c;
+        --brand-2: #ff6a1a;
         --brand-3: #c2410c;
         --brand-ink: #9a3412;
         --brand-wash: #fff4ec;
+        /* Product colors — same as the cube logos */
+        --dumont: #0f766e;
+        --dumont-wash: #ecf8f6;
+        --turing: #4169e1;
+        --turing-wash: #eef2fd;
+        --shio: #7c3aed;
+        --shio-wash: #f4effe;
         --shadow-card: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px -12px rgba(194,65,12,.14);
         --shadow-hover: 0 4px 12px rgba(0,0,0,.06), 0 18px 40px -18px rgba(194,65,12,.28);
         --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -94,7 +101,7 @@
           var(--bg);
         border-bottom: 1px solid var(--border);
       }
-      .hero { position: relative; text-align: center; padding: 5.5rem 0 4.5rem; }
+      .hero { position: relative; text-align: center; padding-block: 5.5rem 4.5rem; }
       .eyebrow {
         display: inline-flex; align-items: center; gap: .5rem; margin-bottom: 1.4rem;
         padding: .35rem .8rem .35rem .5rem; border-radius: 999px;
@@ -107,13 +114,16 @@
       }
       h1 {
         font-family: var(--brand-font);
-        margin: 0 auto .9rem; max-width: 20ch; font-size: clamp(2.3rem, 5.5vw, 3.6rem);
+        margin: 0 auto .9rem; max-width: 22ch; font-size: clamp(2.3rem, 5.5vw, 3.6rem);
         font-weight: 800; line-height: 1.05; letter-spacing: -.02em;
       }
       .grad {
-        background: linear-gradient(120deg, var(--brand-3), var(--brand-2) 60%, #fb923c);
+        background: linear-gradient(120deg, var(--brand-3), var(--brand) 45%, var(--brand-2));
         -webkit-background-clip: text; background-clip: text; color: transparent;
       }
+      .v-dumont { color: var(--dumont); }
+      .v-turing { color: var(--turing); }
+      .v-shio { color: var(--shio); }
       .lead { margin: 0 auto; max-width: 44rem; font-size: 1.12rem; color: var(--muted); }
       .cta { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; margin: 2rem 0 0; }
       .btn {
@@ -129,10 +139,76 @@
       .btn-ghost { background: var(--card); border-color: var(--border-strong); color: var(--text); }
       .btn:hover { transform: translateY(-1px); }
 
-      /* ── Cards ───────────────────────────────────────── */
-      .section { padding: 4rem 0; flex: 1; }
-      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-      .card {
+      /* ── Sections ────────────────────────────────────── */
+      .section { padding: 4rem 0; }
+      .section + .section { padding-top: 0; }
+      main { flex: 1; }
+      .section-head { margin: 0 0 1.75rem; }
+      .section-head h2 {
+        font-family: var(--brand-font); font-size: 1.6rem; font-weight: 800;
+        letter-spacing: -.015em; margin: 0 0 .35rem;
+      }
+      .section-head p { margin: 0; color: var(--muted); max-width: 44rem; }
+
+      /* ── Product cards ───────────────────────────────── */
+      .products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .product {
+        --c: var(--brand); --wash: var(--brand-wash);
+        position: relative; display: flex; flex-direction: column; background: var(--card);
+        border: 1px solid var(--border); border-top: 4px solid var(--c); border-radius: 1rem;
+        padding: 1.6rem; box-shadow: var(--shadow-card);
+        transition: transform .14s ease, box-shadow .14s ease;
+      }
+      .product:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+      .product.dumont { --c: var(--dumont); --wash: var(--dumont-wash); }
+      .product.turing { --c: var(--turing); --wash: var(--turing-wash); }
+      .product.shio { --c: var(--shio); --wash: var(--shio-wash); }
+      .product-head { display: flex; align-items: center; gap: .9rem; margin-bottom: 1rem; }
+      .product-head img { width: 52px; height: 52px; flex: none; }
+      .product-kicker {
+        display: block; font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+        text-transform: uppercase; color: var(--c);
+      }
+      .product h3 { font-family: var(--brand-font); font-size: 1.35rem; font-weight: 800; margin: 0; letter-spacing: -.01em; }
+      .product h3 span { color: var(--muted); font-weight: 600; }
+      /* Whole card is clickable through the title link. */
+      .product h3 a { color: inherit; text-decoration: none; }
+      .product h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+      .product p { margin: 0 0 1.25rem; color: var(--muted); }
+      .product-links {
+        position: relative; z-index: 1; margin-top: auto; display: flex; flex-wrap: wrap;
+        gap: .5rem; align-items: center;
+      }
+      .product-links a {
+        font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--muted);
+        padding: .35rem .7rem; border-radius: .5rem; border: 1px solid var(--border-strong);
+      }
+      .product-links a:hover { color: var(--text); background: var(--bg-alt); }
+      .product-links a.primary { color: var(--c); background: var(--wash); border-color: transparent; }
+      .product-links a.primary:hover { filter: brightness(.97); }
+      /* Flagship: full-width card with a bigger logo and a feature list. */
+      .product.featured {
+        grid-column: 1 / -1; padding: 2.2rem;
+        background: linear-gradient(135deg, var(--wash), var(--card) 55%);
+      }
+      .featured-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: start; margin-bottom: 1.25rem; }
+      .product.featured .product-head img { width: 84px; height: 84px; }
+      .product.featured h3 { font-size: 1.9rem; }
+      .product.featured p { font-size: 1.05rem; color: var(--text); }
+      .flagship {
+        display: inline-block; margin-left: .5rem; padding: .15rem .55rem; border-radius: 999px;
+        background: var(--c); color: #fff; font-size: .68rem; letter-spacing: .06em; vertical-align: 1px;
+      }
+      .features { margin: 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+      .features li { position: relative; padding-left: 1.5rem; color: var(--muted); font-size: .95rem; }
+      .features li::before {
+        content: ""; position: absolute; left: 0; top: .5em; width: .6rem; height: .6rem;
+        border-radius: 2px; background: var(--c); transform: rotate(45deg);
+      }
+      .features strong { color: var(--text); font-weight: 600; }
+
+      /* ── Resource cards ──────────────────────────────── */
+      .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }      .card {
         display: flex; flex-direction: column; background: var(--card);
         border: 1px solid var(--border); border-radius: 1rem; padding: 1.6rem;
         box-shadow: var(--shadow-card); text-decoration: none; color: inherit;
@@ -145,7 +221,7 @@
         border: 1px solid color-mix(in srgb, var(--brand) 22%, transparent);
         padding: .25rem .6rem; border-radius: 999px; margin-bottom: 1rem;
       }
-      .card h2 { font-family: var(--brand-font); font-size: 1.35rem; font-weight: 800; margin: 0 0 .5rem; letter-spacing: -.01em; }
+      .card h3 { font-family: var(--brand-font); font-size: 1.35rem; font-weight: 800; margin: 0 0 .5rem; letter-spacing: -.01em; }
       .card p { margin: 0 0 1.25rem; color: var(--muted); }
       .card .go { margin-top: auto; font-weight: 700; color: var(--brand-3); }
 
@@ -158,19 +234,33 @@
       footer a { color: var(--muted); text-decoration: none; }
       footer a:hover { color: var(--text); }
       footer nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+      @media (max-width: 900px) {
+        .products, .featured-body { grid-template-columns: 1fr; }
+        .product.featured { padding: 1.6rem; }
+      }
+      @media (max-width: 640px) {
+        .wrap { padding: 0 1rem; }
+        .topnav .opt { display: none; }
+        .topnav { gap: 1rem; }
+        .hero { padding-block: 3.5rem 3rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .btn, .card, .product { transition: none; }
+        .btn:hover, .card:hover, .product:hover { transform: none; }
+      }
     </style>
   </head>
   <body>
     <div class="topbar">
       <div class="wrap">
         <a class="brand" href="/">
-          <img src="/viglet-logo.png" alt="Viglet logo" width="26" height="26" />
+          <img src="/logos/viglet.svg" alt="" width="28" height="28" />
           <strong>Viglet</strong>
         </a>
         <nav class="topnav" aria-label="Primary">
-          <a href="https://openviglet.github.io/model-catalog/">Model Catalog</a>
-          <a href="https://www.viglet.org/">viglet.org</a>
-          <a href="https://docs.viglet.org/">Docs</a>
+          <a href="#products">Products</a>
+          <a class="opt" href="https://openviglet.github.io/model-catalog/">Model Catalog</a>
           <a href="https://github.com/openviglet">GitHub</a>
         </nav>
       </div>
@@ -178,62 +268,132 @@
 
     <header class="hero-wrap">
       <div class="wrap hero">
-        <span class="eyebrow"><span class="dot"></span> Open source · vendor-neutral</span>
-        <h1>Open building blocks for<br /><span class="grad">AI-driven applications</span></h1>
+        <span class="eyebrow"><span class="dot"></span> Open source suite · Apache 2.0</span>
+        <h1><span class="v-dumont">Move</span> it. <span class="v-turing">Find</span> it. <span class="v-shio">Publish</span> it.</h1>
         <p class="lead">
-          Viglet builds open, standards-first tools for the AI era — from a vendor-neutral catalog
-          of every AI model to a full suite of content, search and experience products.
+          Data exchange, enterprise search and an agent-ready CMS, built to work together and run
+          on your own infrastructure. Plus a vendor-neutral catalog of AI models.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://openviglet.github.io/model-catalog/">Explore the Model Catalog</a>
-          <a class="btn btn-ghost" href="https://www.viglet.org/">Visit viglet.org &#8599;</a>
+          <a class="btn btn-primary" href="#products">Explore the products</a>
+          <a class="btn btn-ghost" href="https://openviglet.github.io/model-catalog/">Model Catalog</a>
         </div>
       </div>
     </header>
 
-    <main class="section">
-      <div class="wrap">
-        <div class="cards">
-          <a class="card" href="https://openviglet.github.io/model-catalog/">
-            <span class="badge">Open data</span>
-            <h2>Model Catalog</h2>
-            <p>
-              A vendor-neutral, kind-aware catalog of LLM, embedding, rerank &amp; media models — which
-              ids exist per vendor and, for each, its kind, context window and capabilities. Just clean JSON.
-            </p>
-            <span class="go">Browse the catalog &#8594;</span>
-          </a>
+    <main>
+      <section class="section" id="products" aria-labelledby="products-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="products-title">The Viglet suite</h2>
+            <p>Turing is the core: search and AI over your content. Dumont feeds it from your sources, Shio publishes the content it searches. Each one also runs on its own.</p>
+          </div>
+          <div class="products">
+            <article class="product turing featured">
+              <div class="product-head">
+                <img src="/logos/turing-small.svg" alt="" width="84" height="84" />
+                <div>
+                  <span class="product-kicker">Enterprise search <span class="flagship">Flagship</span></span>
+                  <h3><a href="https://openviglet.github.io/turing/"><span>Viglet</span> Turing</a></h3>
+                </div>
+              </div>
+              <div class="featured-body">
+                <p>
+                  Enterprise search, cited RAG and AI agents over your content. Self-hosted, with your
+                  choice of search engine and LLM.
+                </p>
+                <ul class="features">
+                  <li><strong>Semantic navigation</strong> with facets, spotlights and hybrid keyword + vector ranking</li>
+                  <li><strong>Answers with citations</strong> grounded in your own indexed content</li>
+                  <li><strong>Your stack</strong>: Solr, Elasticsearch or Lucene, any LLM provider</li>
+                </ul>
+              </div>
+              <div class="product-links">
+                <a class="primary" href="https://openviglet.github.io/turing/">Product site &#8594;</a>
+                <a href="https://openviglet.github.io/turing/docs/">Docs</a>
+                <a href="https://github.com/openviglet/turing">GitHub</a>
+              </div>
+            </article>
 
-          <a class="card" href="https://www.viglet.org/">
-            <span class="badge">Product suite</span>
-            <h2>viglet.org</h2>
-            <p>
-              The home of the Viglet product suite — content management, semantic search and digital
-              experience platforms, all open source and built to work together.
-            </p>
-            <span class="go">Discover the products &#8594;</span>
-          </a>
-
-          <a class="card" href="https://docs.viglet.org/">
-            <span class="badge">Documentation</span>
-            <h2>docs.viglet.org</h2>
-            <p>
-              Guides, references and tutorials for the Viglet suite — everything you need to install,
-              configure and build with Viglet's products and APIs.
-            </p>
-            <span class="go">Read the docs &#8594;</span>
-          </a>
+            <article class="product dumont">
+              <div class="product-head">
+                <img src="/logos/dumont-small.svg" alt="" width="52" height="52" />
+                <div>
+                  <span class="product-kicker">Data exchange</span>
+                  <h3><a href="https://openviglet.github.io/dumont/"><span>Viglet</span> Dumont</a></h3>
+                </div>
+              </div>
+              <p>
+                Connectors that move content from AEM, databases, file shares, websites and JSON APIs
+                into Turing, Solr or Elasticsearch, and audit the index against the source.
+              </p>
+              <div class="product-links">
+                <a class="primary" href="https://openviglet.github.io/dumont/">Product site &#8594;</a>
+                <a href="https://openviglet.github.io/dumont/docs/">Docs</a>
+                <a href="https://github.com/openviglet/dumont">GitHub</a>
+              </div>
+            </article>
+            <article class="product shio">
+              <div class="product-head">
+                <img src="/logos/shio-small.svg" alt="" width="52" height="52" />
+                <div>
+                  <span class="product-kicker">Agent-ready CMS</span>
+                  <h3><a href="https://openviglet.github.io/shio/"><span>Viglet</span> Shio</a></h3>
+                </div>
+              </div>
+              <p>
+                A CMS you drive from the console, a coding agent over MCP, Markdown files in a repo or
+                a REST/GraphQL API, with the same drafts and publish step behind all four.
+              </p>
+              <div class="product-links">
+                <a class="primary" href="https://openviglet.github.io/shio/">Product site &#8594;</a>
+                <a href="https://openviglet.github.io/shio/docs/">Docs</a>
+                <a href="https://github.com/openviglet/shio">GitHub</a>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="section" aria-labelledby="resources-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="resources-title">More from Viglet</h2>
+          </div>
+          <div class="cards">
+            <a class="card" href="https://openviglet.github.io/model-catalog/">
+              <span class="badge">Open data</span>
+              <h3>Model Catalog</h3>
+              <p>
+                A vendor-neutral, kind-aware catalog of LLM, embedding, rerank &amp; media models — which
+                ids exist per vendor and, for each, its kind, context window and capabilities. Just clean JSON.
+              </p>
+              <span class="go">Browse the catalog &#8594;</span>
+            </a>
+
+            <a class="card" href="https://www.viglet.org/">
+              <span class="badge">Company</span>
+              <h3>viglet.org</h3>
+              <p>
+                News, releases and the story behind the suite — the company home of Dumont, Turing
+                and Shio.
+              </p>
+              <span class="go">Visit viglet.org &#8599;</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
       <div class="wrap">
         <span>&copy; Viglet · Open Source</span>
         <nav aria-label="Footer">
+          <a href="https://openviglet.github.io/turing/">Turing</a>
+          <a href="https://openviglet.github.io/dumont/">Dumont</a>
+          <a href="https://openviglet.github.io/shio/">Shio</a>
           <a href="https://openviglet.github.io/model-catalog/">Model Catalog</a>
           <a href="https://www.viglet.org/">viglet.org</a>
-          <a href="https://docs.viglet.org/">Docs</a>
           <a href="https://github.com/openviglet">GitHub</a>
         </nav>
       </div>
